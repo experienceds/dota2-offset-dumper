@@ -2,3 +2,5 @@
 #pragma once
 #include <cstdint>
 
+namespace networksystem_dll {
+} // namespace networksystem_dll

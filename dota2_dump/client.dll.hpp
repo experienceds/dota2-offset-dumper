@@ -2,6 +2,7 @@
 #pragma once
 #include <cstdint>
 
+namespace client_dll {
 namespace C_DOTA_BaseNPC_Shop { // size 0x1A60
     constexpr auto m_ShopType = 0x1A20;
     constexpr auto m_nShopFX = 0x1A48;
@@ -28223,3 +28224,4 @@ namespace CDOTA_Modifier_Earthshaker_Fissure_Line_Thinker { // size 0x1AA8
     constexpr auto m_flTotalDistanceMoved = 0x1AA0;
     constexpr auto m_nFissureEffectIndex = 0x1AA4;
 }
+} // namespace client_dll

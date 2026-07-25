@@ -2,6 +2,7 @@
 #pragma once
 #include <cstdint>
 
+namespace pulse_system_dll {
 namespace CPulseCell_Step_TestDomainDestroyFakeEntity { // size 0x48
 }
 namespace CPulseCell_WaitForCursorsWithTag { // size 0x130
@@ -349,3 +350,4 @@ namespace CPulseCell_Value_RandomFloat { // size 0x48
 }
 namespace CPulseExecCursor { // size 0xD8
 }
+} // namespace pulse_system_dll

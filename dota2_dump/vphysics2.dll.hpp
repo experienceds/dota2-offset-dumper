@@ -2,3 +2,5 @@
 #pragma once
 #include <cstdint>
 
+namespace vphysics2_dll {
+} // namespace vphysics2_dll

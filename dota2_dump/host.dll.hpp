@@ -2,3 +2,5 @@
 #pragma once
 #include <cstdint>
 
+namespace host_dll {
+} // namespace host_dll

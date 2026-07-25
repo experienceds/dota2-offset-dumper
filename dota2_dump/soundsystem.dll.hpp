@@ -2,3 +2,5 @@
 #pragma once
 #include <cstdint>
 
+namespace soundsystem_dll {
+} // namespace soundsystem_dll

@@ -2,3 +2,5 @@
 #pragma once
 #include <cstdint>
 
+namespace materialsystem2_dll {
+} // namespace materialsystem2_dll

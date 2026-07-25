@@ -2,6 +2,7 @@
 #pragma once
 #include <cstdint>
 
+namespace particles_dll {
 namespace CPulseCell_WaitForCursorsWithTag { // size 0x130
     constexpr auto m_bTagSelfWhenComplete = 0x128;
     constexpr auto m_nDesiredKillPriority = 0x12C;
@@ -239,3 +240,4 @@ namespace CPulseCell_Value_RandomFloat { // size 0x48
 }
 namespace CPulseExecCursor { // size 0xD8
 }
+} // namespace particles_dll

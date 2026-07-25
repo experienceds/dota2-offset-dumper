@@ -2,6 +2,7 @@
 #pragma once
 #include <cstdint>
 
+namespace server_dll {
 namespace CDOTA_Modifier_AghsFort_Arcanist_Potion { // size 0x1A60
     constexpr auto m_nCooldownReductionPct = 0x1A58;
     constexpr auto m_nManaCostReductionPct = 0x1A5C;
@@ -32126,3 +32127,4 @@ namespace CDOTA_Ability_Special_Bonus_Movement_Speed_Percentage_14 { // size 0x5
 }
 namespace CDOTA_Ability_Special_Bonus_HP_Regen_7 { // size 0x580
 }
+} // namespace server_dll

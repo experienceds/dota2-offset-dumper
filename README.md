@@ -20,16 +20,59 @@ Running the tool produces a `dota2_dump/` folder containing:
 | `interfaces.hpp` | Runtime interface addresses (resolved via `CreateInterface`) |
 | `engine_offsets.hpp` | Engine globals — entity list, view matrix, local player controller |
 | `important_offsets.hpp` | Curated subset of the most commonly used classes |
+| `offsets.json` | Same data, machine-readable — load it at startup instead of editing headers |
+| `offsets_diff.txt` | What moved since the previous dump (written only when something changed) |
 
 Typical output: ~14,300 classes and ~32,500 fields across 20 modules.
 
 Example (`client.dll.hpp`):
 
 ```cpp
-namespace C_DOTA_BaseNPC { // size 0x19B0
-    constexpr auto m_bIsPhantom = 0xB90;
-    constexpr auto m_iUnitType = 0xB94;
-    constexpr auto m_iCurrentLevel = 0xBAC;
+namespace client_dll {
+    namespace C_DOTA_BaseNPC { // size 0x19B0
+        constexpr auto m_bIsPhantom = 0xB90;
+        constexpr auto m_iUnitType = 0xB94;
+        constexpr auto m_iCurrentLevel = 0xBAC;
+    }
+}
+```
+
+Each header is wrapped in a namespace named after its module. The same class
+name exists in several modules with different layouts (`CGameSceneNode::m_vecOrigin`
+is `0x90` in `client.dll` and `0x80` in `server.dll`), so the module namespace is
+what keeps `client.dll.hpp` and `server.dll.hpp` usable in the same translation
+unit.
+
+## Staying up to date
+
+Nothing has to be updated by hand. `--watch` keeps the dumper running in the
+background; it notices when Dota is patched or restarted and re-dumps by itself:
+
+```
+dump.bat --watch 60
+```
+
+The argument is the poll interval in seconds (default 60). A patch is detected
+from the size and timestamp of `dota2.exe`, so builds shipped without a version
+bump are caught too.
+
+After every dump the output is compared with the previous one and the
+differences are written to `offsets_diff.txt`:
+
+```
+~ schema::server.dll::CGameSceneNode::m_vecOrigin 0x1092 -> 0x80
++ schema::client.dll::C_DOTA_BaseNPC::m_iNewField
+- schema::client.dll::C_DOTA_BaseNPC::m_iRemovedField
+```
+
+For consumers, `offsets.json` is the file to read — an application can reload it
+at startup and pick up a new build without being recompiled:
+
+```json
+{
+  "build": "987800-1dd1b52ed0354a3",
+  "engine": { "dwEntityList": 106043192 },
+  "schema": { "client.dll::CGameSceneNode": { "m_vecOrigin": 144 } }
 }
 ```
 
@@ -44,7 +87,9 @@ namespace C_DOTA_BaseNPC { // size 0x19B0
 The dumper can also be run directly:
 
 ```
-dota2_dumper.exe
+dota2_dumper.exe              one-shot dump
+dota2_dumper.exe --watch 60   re-dump automatically on every game patch
+dota2_dumper.exe --selftest   internal check (JSON round-trip, diff), no game needed
 ```
 
 ## Requirements
@@ -58,6 +103,7 @@ dota2_dumper.exe
 - If any value in `engine_offsets.hpp` comes out as `0x0` after a large game
   update, the corresponding signature needs to be refreshed. Schema and
   interface output is unaffected and continues to update automatically.
+- `offsets_diff.txt` is per-run output; it is not tracked in this repository.
 - Offsets were cross-checked against two independent memory-reading methods
   (usermode and DMA) to confirm correctness.
 

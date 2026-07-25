@@ -2,3 +2,5 @@
 #pragma once
 #include <cstdint>
 
+namespace resourcesystem_dll {
+} // namespace resourcesystem_dll

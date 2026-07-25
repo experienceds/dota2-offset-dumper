@@ -2,3 +2,5 @@
 #pragma once
 #include <cstdint>
 
+namespace steamaudio_dll {
+} // namespace steamaudio_dll

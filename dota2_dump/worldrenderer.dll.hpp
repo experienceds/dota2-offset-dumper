@@ -2,6 +2,7 @@
 #pragma once
 #include <cstdint>
 
+namespace worldrenderer_dll {
 namespace CEntityInstance { // size 0x30
     constexpr auto m_iszPrivateVScripts = 0x8;
     constexpr auto m_pEntity = 0x10;
@@ -26,3 +27,4 @@ namespace CEntityIdentity { // size 0x70
     constexpr auto m_pPrevByClass = 0x60;
     constexpr auto m_pNextByClass = 0x68;
 }
+} // namespace worldrenderer_dll
