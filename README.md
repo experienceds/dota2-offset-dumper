@@ -17,9 +17,10 @@ Running the tool produces a `dota2_dump/` folder containing:
 | File | Contents |
 |------|----------|
 | `client.dll.hpp`, `server.dll.hpp`, … | Full schema field offsets for every class, one header per module |
-| `interfaces.hpp` | Runtime interface addresses (resolved via `CreateInterface`) |
+| `interfaces.hpp` | Runtime interfaces as module + RVA (resolved via `CreateInterface`) |
 | `engine_offsets.hpp` | Engine globals — entity list, view matrix, local player controller |
 | `important_offsets.hpp` | Curated subset of the most commonly used classes |
+| `enums.hpp` | Schema enums as real `enum class` (`DOTA_RUNES`, `MoveType_t`, ...) |
 | `offsets.json` | Same data, machine-readable — load it at startup instead of editing headers |
 | `offsets_diff.txt` | What moved since the previous dump (written only when something changed) |
 
@@ -29,12 +30,25 @@ Example (`client.dll.hpp`):
 
 ```cpp
 namespace client_dll {
-    namespace C_DOTA_BaseNPC { // size 0x19B0
-        constexpr auto m_bIsPhantom = 0xB90;
-        constexpr auto m_iUnitType = 0xB94;
-        constexpr auto m_iCurrentLevel = 0xBAC;
+    // C_DOTA_BaseNPC : C_NextBotCombatCharacter  size 0x19B0
+    namespace C_DOTA_BaseNPC {
+        constexpr auto m_bIsPhantom = 0xB90;    // bool
+        constexpr auto m_iUnitType = 0xB94;     // uint32
+        constexpr auto m_iCurrentLevel = 0xBAC; // int32
     }
 }
+```
+
+Each field carries its schema type, and each class its base class, so the
+offset can actually be used without guessing how wide the member is or which
+class it was inherited from. Enums come out as usable declarations:
+
+```cpp
+enum class DOTA_RUNES : int32_t {
+    DOTA_RUNE_INVALID = -1,
+    DOTA_RUNE_DOUBLEDAMAGE = 0,
+    DOTA_RUNE_HASTE = 1,
+};
 ```
 
 Each header is wrapped in a namespace named after its module. The same class
@@ -104,6 +118,12 @@ dota2_dumper.exe --selftest   internal check (JSON round-trip, diff), no game ne
   update, the corresponding signature needs to be refreshed. Schema and
   interface output is unaffected and continues to update automatically.
 - `offsets_diff.txt` is per-run output; it is not tracked in this repository.
+- The layout of the schema structures themselves (where a class binding keeps
+  its base classes, where a type keeps its name) is calibrated against the live
+  process at startup rather than hardcoded, and each calibration step prints
+  `OK` or `FAIL`. A step that cannot be resolved is skipped, never guessed.
+- Enums are reached through the type object of the fields that use them, so an
+  enum no field references is not in the output.
 - Offsets were cross-checked against two independent memory-reading methods
   (usermode and DMA) to confirm correctness.
 
