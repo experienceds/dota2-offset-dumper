@@ -5,12 +5,12 @@
 namespace particles_dll {
     // CPulseCell_WaitForCursorsWithTag : CPulseCell_WaitForCursorsWithTagBase  size 0x130
     namespace CPulseCell_WaitForCursorsWithTag {
-        constexpr auto m_bTagSelfWhenComplete = 0x128; // bool
-        constexpr auto m_nDesiredKillPriority = 0x12C; // PulseCursorCancelPriority_t
+        constexpr auto m_bTagSelfWhenComplete = 0x128; // bool  MPropertyDescription
+        constexpr auto m_nDesiredKillPriority = 0x12C; // PulseCursorCancelPriority_t  MPropertyDescription
     }
     // CPulseCell_Base  size 0x48
     namespace CPulseCell_Base {
-        constexpr auto m_nEditorNodeID = 0x8; // PulseDocNodeID_t
+        constexpr auto m_nEditorNodeID = 0x8; // PulseDocNodeID_t  MFgdFromSchemaCompletelySkipField
     }
     // CPulse_ResumePoint : CPulse_OutflowConnection  size 0x48
     namespace CPulse_ResumePoint {
@@ -25,7 +25,7 @@ namespace particles_dll {
     }
     // CPulseCell_WaitForObservable : CPulseCell_BaseYieldingInflow  size 0x198
     namespace CPulseCell_WaitForObservable {
-        constexpr auto m_Condition = 0xD8; // CPulseObservableExpression< bool >
+        constexpr auto m_Condition = 0xD8; // CPulseObservableExpression< bool >  MPropertyDescription, MPropertyFriendlyName
         constexpr auto m_OnTrue = 0x150; // CPulse_ResumePoint
     }
     // CPulse_OutflowConnection  size 0x48
@@ -94,7 +94,7 @@ namespace particles_dll {
     // PulseNodeDynamicOutflows_t::DynamicOutflow_t  size 0x50
     namespace PulseNodeDynamicOutflows_t::DynamicOutflow_t {
         constexpr auto m_OutflowID = 0x0; // CGlobalSymbol
-        constexpr auto m_Connection = 0x8; // CPulse_OutflowConnection
+        constexpr auto m_Connection = 0x8; // CPulse_OutflowConnection  MFgdFromSchemaCompletelySkipField
     }
     // CBasePulseGraphInstance  size 0x110
     namespace CBasePulseGraphInstance {
@@ -113,7 +113,7 @@ namespace particles_dll {
     }
     // CPulseCell_WaitForCursorsWithTagBase : CPulseCell_BaseYieldingInflow  size 0x128
     namespace CPulseCell_WaitForCursorsWithTagBase {
-        constexpr auto m_nCursorsAllowedToWait = 0xD8; // int32
+        constexpr auto m_nCursorsAllowedToWait = 0xD8; // int32  MPropertyDescription
         constexpr auto m_WaitComplete = 0xE0; // CPulse_ResumePoint
     }
     // CPulse_InvokeBinding  size 0xB0
@@ -126,8 +126,8 @@ namespace particles_dll {
     }
     // CPulseCell_IntervalTimer : CPulseCell_BaseYieldingInflow  size 0x168
     namespace CPulseCell_IntervalTimer {
-        constexpr auto m_Completed = 0xD8; // CPulse_ResumePoint
-        constexpr auto m_OnInterval = 0x120; // SignatureOutflow_Continue
+        constexpr auto m_Completed = 0xD8; // CPulse_ResumePoint  MPropertyDescription
+        constexpr auto m_OnInterval = 0x120; // SignatureOutflow_Continue  MPropertyDescription
     }
     // CPulseCell_BaseLerp : CPulseCell_BaseYieldingInflow  size 0x120
     namespace CPulseCell_BaseLerp {
@@ -185,8 +185,8 @@ namespace particles_dll {
     }
     // CPulseCell_BaseYieldingInflow : CPulseCell_BaseFlow  size 0xD8
     namespace CPulseCell_BaseYieldingInflow {
-        constexpr auto m_BaseFlow_OnAfterCancel = 0x48; // CPulse_ResumePoint
-        constexpr auto m_BaseFlow_WhileActive = 0x90; // CPulse_ResumePoint
+        constexpr auto m_BaseFlow_OnAfterCancel = 0x48; // CPulse_ResumePoint  MPulseFGDSkipField
+        constexpr auto m_BaseFlow_WhileActive = 0x90; // CPulse_ResumePoint  MPulseFGDSkipField
     }
     // PulseNodeDynamicOutflows_t  size 0x18
     namespace PulseNodeDynamicOutflows_t {
@@ -230,9 +230,9 @@ namespace particles_dll {
     }
     // CPulseCell_BooleanSwitchState : CPulseCell_BaseState  size 0x1E0
     namespace CPulseCell_BooleanSwitchState {
-        constexpr auto m_Condition = 0xD8; // CPulseObservableExpression< bool >
-        constexpr auto m_WhenTrue = 0x150; // CPulse_OutflowConnection
-        constexpr auto m_WhenFalse = 0x198; // CPulse_OutflowConnection
+        constexpr auto m_Condition = 0xD8; // CPulseObservableExpression< bool >  MPropertyDescription, MPropertyFriendlyName
+        constexpr auto m_WhenTrue = 0x150; // CPulse_OutflowConnection  MPropertyDescription, MPropertyFriendlyName
+        constexpr auto m_WhenFalse = 0x198; // CPulse_OutflowConnection  MPropertyDescription, MPropertyFriendlyName
     }
     // CPulseCell_Inflow_Yield : CPulseCell_BaseYieldingInflow  size 0x120
     namespace CPulseCell_Inflow_Yield {
@@ -278,7 +278,7 @@ namespace particles_dll {
     }
     // CPulseCell_LimitCount : CPulseCell_BaseRequirement  size 0x50
     namespace CPulseCell_LimitCount {
-        constexpr auto m_nLimitCount = 0x48; // int32
+        constexpr auto m_nLimitCount = 0x48; // int32  MPropertyFlattenIntoParentRow
     }
     // CPulseCell_Step_CallExternalMethod : CPulseCell_BaseYieldingInflow  size 0x150
     namespace CPulseCell_Step_CallExternalMethod {
@@ -294,7 +294,7 @@ namespace particles_dll {
     }
     // CPulseCell_CursorQueue : CPulseCell_WaitForCursorsWithTagBase  size 0x130
     namespace CPulseCell_CursorQueue {
-        constexpr auto m_nCursorsAllowedToRunParallel = 0x128; // int32
+        constexpr auto m_nCursorsAllowedToRunParallel = 0x128; // int32  MPropertyDescription
     }
     // CPulseCell_Value_RandomFloat : CPulseCell_BaseValue  size 0x48
     namespace CPulseCell_Value_RandomFloat {

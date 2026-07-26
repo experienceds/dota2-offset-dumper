@@ -147,7 +147,7 @@ namespace client_dll {
     }
     // C_DOTAGameManager  size 0x3340
     namespace C_DOTAGameManager {
-        constexpr auto __m_pChainEntity = 0x30; // CNetworkVarChainer
+        constexpr auto __m_pChainEntity = 0x30; // CNetworkVarChainer  MNotSaved
         constexpr auto m_bCustomGame = 0x1618; // bool
         constexpr auto m_bEventGame = 0x1619; // bool
         constexpr auto m_bGameModeWantsDefaultNeutralItemSchema = 0x161A; // bool
@@ -513,8 +513,8 @@ namespace client_dll {
     }
     // CPulseCell_WaitForCursorsWithTag : CPulseCell_WaitForCursorsWithTagBase  size 0x130
     namespace CPulseCell_WaitForCursorsWithTag {
-        constexpr auto m_bTagSelfWhenComplete = 0x128; // bool
-        constexpr auto m_nDesiredKillPriority = 0x12C; // PulseCursorCancelPriority_t
+        constexpr auto m_bTagSelfWhenComplete = 0x128; // bool  MPropertyDescription
+        constexpr auto m_nDesiredKillPriority = 0x12C; // PulseCursorCancelPriority_t  MPropertyDescription
     }
     // C_DOTA_Unit_Hero_Life_Stealer : C_DOTA_BaseNPC_Hero  size 0x1D80
     namespace C_DOTA_Unit_Hero_Life_Stealer {
@@ -1302,8 +1302,8 @@ namespace client_dll {
     }
     // C_EnvWindShared  size 0xF8
     namespace C_EnvWindShared {
-        constexpr auto m_flStartTime = 0x8; // GameTime_t
-        constexpr auto m_iWindSeed = 0xC; // uint32
+        constexpr auto m_flStartTime = 0x8; // GameTime_t  MNotSaved
+        constexpr auto m_iWindSeed = 0xC; // uint32  MNotSaved
         constexpr auto m_iMinWind = 0x10; // uint16
         constexpr auto m_iMaxWind = 0x12; // uint16
         constexpr auto m_windRadius = 0x14; // int32
@@ -1313,21 +1313,21 @@ namespace client_dll {
         constexpr auto m_flMaxGustDelay = 0x20; // float32
         constexpr auto m_flGustDuration = 0x24; // float32
         constexpr auto m_iGustDirChange = 0x28; // uint16
-        constexpr auto m_iInitialWindDir = 0x2A; // uint16
-        constexpr auto m_flInitialWindSpeed = 0x2C; // float32
-        constexpr auto m_location = 0x30; // VectorWS
-        constexpr auto m_hEntOwner = 0x3C; // CHandle< C_BaseEntity >
+        constexpr auto m_iInitialWindDir = 0x2A; // uint16  MNotSaved
+        constexpr auto m_flInitialWindSpeed = 0x2C; // float32  MNotSaved
+        constexpr auto m_location = 0x30; // VectorWS  MNotSaved
+        constexpr auto m_hEntOwner = 0x3C; // CHandle< C_BaseEntity >  MNotSaved
     }
     // C_SkyCamera : C_BaseEntity  size 0x690
     namespace C_SkyCamera {
-        constexpr auto m_skyboxData = 0x5F0; // sky3dparams_t
+        constexpr auto m_skyboxData = 0x5F0; // sky3dparams_t  MNotSaved
         constexpr auto m_skyboxSlotToken = 0x680; // CUtlStringToken
         constexpr auto m_bUseAngles = 0x684; // bool
-        constexpr auto m_pNext = 0x688; // C_SkyCamera*
+        constexpr auto m_pNext = 0x688; // C_SkyCamera*  MNotSaved
     }
     // CPulseCell_Base  size 0x48
     namespace CPulseCell_Base {
-        constexpr auto m_nEditorNodeID = 0x8; // PulseDocNodeID_t
+        constexpr auto m_nEditorNodeID = 0x8; // PulseDocNodeID_t  MFgdFromSchemaCompletelySkipField
     }
     // C_DOTA_Item_Timeless_Relic : C_DOTA_Item  size 0x758
     namespace C_DOTA_Item_Timeless_Relic {
@@ -1980,13 +1980,13 @@ namespace client_dll {
     }
     // C_FuncElectrifiedVolume : C_FuncBrush  size 0xAA0
     namespace C_FuncElectrifiedVolume {
-        constexpr auto m_nAmbientEffect = 0xA88; // ParticleIndex_t
-        constexpr auto m_EffectName = 0xA90; // CUtlSymbolLarge
-        constexpr auto m_bState = 0xA98; // bool
+        constexpr auto m_nAmbientEffect = 0xA88; // ParticleIndex_t  MNotSaved
+        constexpr auto m_EffectName = 0xA90; // CUtlSymbolLarge  MNotSaved
+        constexpr auto m_bState = 0xA98; // bool  MNotSaved
     }
     // C_DOTASpectatorGraphManager  size 0x9F8
     namespace C_DOTASpectatorGraphManager {
-        constexpr auto __m_pChainEntity = 0x28; // CNetworkVarChainer
+        constexpr auto __m_pChainEntity = 0x28; // CNetworkVarChainer  MNotSaved
         constexpr auto m_bTrackingTeamStats = 0x50; // bool
         constexpr auto m_flStartTime = 0x54; // GameTime_t
         constexpr auto m_rgRadiantTotalEarnedGold = 0x58; // int32[64]
@@ -2263,7 +2263,7 @@ namespace client_dll {
     }
     // CPulseCell_PlaySequence : CPulseCell_BaseYieldingInflow  size 0x140
     namespace CPulseCell_PlaySequence {
-        constexpr auto m_SequenceName = 0xD8; // CUtlString
+        constexpr auto m_SequenceName = 0xD8; // CUtlString  MPropertyAttributeSuggestionName
         constexpr auto m_PulseAnimEvents = 0xE0; // PulseNodeDynamicOutflows_t
         constexpr auto m_OnFinished = 0xF8; // CPulse_ResumePoint
     }
@@ -2686,10 +2686,10 @@ namespace client_dll {
     }
     // CPointOffScreenIndicatorUi : C_PointClientUIWorldPanel  size 0xD00
     namespace CPointOffScreenIndicatorUi {
-        constexpr auto m_bBeenEnabled = 0xCF0; // bool
-        constexpr auto m_bHide = 0xCF1; // bool
-        constexpr auto m_flSeenTargetTime = 0xCF4; // float32
-        constexpr auto m_pTargetPanel = 0xCF8; // C_PointClientUIWorldPanel*
+        constexpr auto m_bBeenEnabled = 0xCF0; // bool  MNotSaved
+        constexpr auto m_bHide = 0xCF1; // bool  MNotSaved
+        constexpr auto m_flSeenTargetTime = 0xCF4; // float32  MNotSaved
+        constexpr auto m_pTargetPanel = 0xCF8; // C_PointClientUIWorldPanel*  MNotSaved
     }
     // CDOTA_Modifier_Creature_Flamestrike_Ground : CDOTA_Buff  size 0x1A68
     namespace CDOTA_Modifier_Creature_Flamestrike_Ground {
@@ -3874,7 +3874,7 @@ namespace client_dll {
         constexpr auto m_nRTEnvCP = 0x2D4; // int32
         constexpr auto m_nRTEnvCPComponent = 0x2D8; // int32
         constexpr auto m_szModifier = 0x2E0; // CUtlString
-        constexpr auto m_nUseSnapshotFromSurfaceGraph = 0x2E8; // int32
+        constexpr auto m_nUseSnapshotFromSurfaceGraph = 0x2E8; // int32  MPropertyDescription
         constexpr auto m_snapshotFilter = 0x2EC; // PrecipitationFilter_t
     }
     // CDOTA_Modifier_AghsFort_Creature_Venomancer_PoisonSting_Applier : CDOTA_Buff  size 0x1A60
@@ -3942,7 +3942,7 @@ namespace client_dll {
     }
     // CPulseCell_WaitForObservable : CPulseCell_BaseYieldingInflow  size 0x198
     namespace CPulseCell_WaitForObservable {
-        constexpr auto m_Condition = 0xD8; // CPulseObservableExpression< bool >
+        constexpr auto m_Condition = 0xD8; // CPulseObservableExpression< bool >  MPropertyDescription, MPropertyFriendlyName
         constexpr auto m_OnTrue = 0x150; // CPulse_ResumePoint
     }
     // C_DOTA_Unit_Hero_Furion : C_DOTA_BaseNPC_Hero  size 0x1D80
@@ -4393,7 +4393,7 @@ namespace client_dll {
     }
     // C_SoundEventBoxEntity : C_SoundEventMultiPointEntity  size 0x6C8
     namespace C_SoundEventBoxEntity {
-        constexpr auto m_vecBoxHelpersNetworked = 0x6B0; // C_NetworkUtlVectorBase< SoundeventBoxHelperNetworked_t >
+        constexpr auto m_vecBoxHelpersNetworked = 0x6B0; // C_NetworkUtlVectorBase< SoundeventBoxHelperNetworked_t >  MNotSaved
     }
     // C_DOTA_Ability_Special_Bonus_HP_Regen_14 : C_DOTABaseAbility  size 0x6A8
     namespace C_DOTA_Ability_Special_Bonus_HP_Regen_14 {
@@ -5779,11 +5779,11 @@ namespace client_dll {
     }
     // CRenderComponent : CEntityComponent  size 0xD0
     namespace CRenderComponent {
-        constexpr auto __m_pChainEntity = 0x10; // CNetworkVarChainer
-        constexpr auto m_bIsRenderingWithViewModels = 0x50; // bool
-        constexpr auto m_nSplitscreenFlags = 0x54; // uint32
-        constexpr auto m_bEnableRendering = 0x58; // bool
-        constexpr auto m_bInterpolationReadyToDraw = 0xA8; // bool
+        constexpr auto __m_pChainEntity = 0x10; // CNetworkVarChainer  MNotSaved
+        constexpr auto m_bIsRenderingWithViewModels = 0x50; // bool  MNotSaved
+        constexpr auto m_nSplitscreenFlags = 0x54; // uint32  MNotSaved
+        constexpr auto m_bEnableRendering = 0x58; // bool  MNotSaved
+        constexpr auto m_bInterpolationReadyToDraw = 0xA8; // bool  MNotSaved
     }
     // CDOTA_Item_Recipe_Quickening_Charm : C_DOTA_Item  size 0x758
     namespace CDOTA_Item_Recipe_Quickening_Charm {
@@ -6402,15 +6402,15 @@ namespace client_dll {
     }
     // C_ColorCorrectionVolume : C_BaseTrigger  size 0xD98
     namespace C_ColorCorrectionVolume {
-        constexpr auto m_LastEnterWeight = 0xB70; // float32
-        constexpr auto m_LastEnterTime = 0xB74; // GameTime_t
-        constexpr auto m_LastExitWeight = 0xB78; // float32
-        constexpr auto m_LastExitTime = 0xB7C; // GameTime_t
-        constexpr auto m_bEnabled = 0xB80; // bool
-        constexpr auto m_MaxWeight = 0xB84; // float32
-        constexpr auto m_FadeDuration = 0xB88; // float32
-        constexpr auto m_Weight = 0xB8C; // float32
-        constexpr auto m_lookupFilename = 0xB90; // char[512]
+        constexpr auto m_LastEnterWeight = 0xB70; // float32  MNotSaved
+        constexpr auto m_LastEnterTime = 0xB74; // GameTime_t  MNotSaved
+        constexpr auto m_LastExitWeight = 0xB78; // float32  MNotSaved
+        constexpr auto m_LastExitTime = 0xB7C; // GameTime_t  MNotSaved
+        constexpr auto m_bEnabled = 0xB80; // bool  MNotSaved
+        constexpr auto m_MaxWeight = 0xB84; // float32  MNotSaved
+        constexpr auto m_FadeDuration = 0xB88; // float32  MNotSaved
+        constexpr auto m_Weight = 0xB8C; // float32  MNotSaved
+        constexpr auto m_lookupFilename = 0xB90; // char[512]  MNotSaved
     }
     // CDOTA_Item_Recipe_Pirate_Hat : C_DOTA_Item  size 0x758
     namespace CDOTA_Item_Recipe_Pirate_Hat {
@@ -6509,12 +6509,12 @@ namespace client_dll {
     // CPlayer_MovementServices : CPlayerPawnComponent  size 0x258
     namespace CPlayer_MovementServices {
         constexpr auto m_nImpulse = 0x48; // int32
-        constexpr auto m_nButtons = 0x50; // CInButtonState
+        constexpr auto m_nButtons = 0x50; // CInButtonState  MNotSaved
         constexpr auto m_nQueuedButtonDownMask = 0x70; // uint64
         constexpr auto m_nQueuedButtonChangeMask = 0x78; // uint64
         constexpr auto m_nButtonDoublePressed = 0x80; // uint64
-        constexpr auto m_pButtonPressedCmdNumber = 0x88; // uint32[64]
-        constexpr auto m_nLastCommandNumberProcessed = 0x188; // uint32
+        constexpr auto m_pButtonPressedCmdNumber = 0x88; // uint32[64]  MNotSaved
+        constexpr auto m_nLastCommandNumberProcessed = 0x188; // uint32  MNotSaved
         constexpr auto m_nToggleButtonDownMask = 0x190; // uint64
         constexpr auto m_flCmdForwardMove = 0x1A0; // float32
         constexpr auto m_flCmdLeftMove = 0x1A4; // float32
@@ -6574,10 +6574,10 @@ namespace client_dll {
         constexpr auto m_bSequenceFinished = 0xD0; // bool
         constexpr auto m_nPrevAnimUpdateTick = 0xD4; // GameTick_t
         constexpr auto m_hGraphDefinitionAG2 = 0x370; // CStrongHandle< InfoForResourceTypeCNmGraphDefinition >
-        constexpr auto m_SerializePoseRecipeAG2Slots = 0x378; // C_UtlVectorEmbeddedNetworkVar< AnimGraph2SerializedPoseRecipeSlot_t >
-        constexpr auto m_SerializePoseRecipeAG2Dynamic = 0x3E0; // C_NetworkUtlVectorBase< uint8 >
-        constexpr auto m_nSerializePoseRecipeAG2ActiveSlot = 0x3F8; // uint32
-        constexpr auto m_nSerializePoseRecipeVersionAG2 = 0x3FC; // int32
+        constexpr auto m_SerializePoseRecipeAG2Slots = 0x378; // C_UtlVectorEmbeddedNetworkVar< AnimGraph2SerializedPoseRecipeSlot_t >  MNotSaved
+        constexpr auto m_SerializePoseRecipeAG2Dynamic = 0x3E0; // C_NetworkUtlVectorBase< uint8 >  MNotSaved
+        constexpr auto m_nSerializePoseRecipeAG2ActiveSlot = 0x3F8; // uint32  MNotSaved
+        constexpr auto m_nSerializePoseRecipeVersionAG2 = 0x3FC; // int32  MNotSaved
         constexpr auto m_nServerGraphInstanceIteration = 0x400; // int32
         constexpr auto m_nServerSerializationContextIteration = 0x404; // int32
         constexpr auto m_primaryGraphId = 0x408; // ResourceId_t
@@ -6666,32 +6666,32 @@ namespace client_dll {
     }
     // C_ColorCorrection : C_BaseEntity  size 0x838
     namespace C_ColorCorrection {
-        constexpr auto m_vecOrigin = 0x5F0; // VectorWS
-        constexpr auto m_MinFalloff = 0x5FC; // float32
-        constexpr auto m_MaxFalloff = 0x600; // float32
-        constexpr auto m_flFadeInDuration = 0x604; // float32
-        constexpr auto m_flFadeOutDuration = 0x608; // float32
-        constexpr auto m_flMaxWeight = 0x60C; // float32
-        constexpr auto m_flCurWeight = 0x610; // float32
-        constexpr auto m_netlookupFilename = 0x614; // char[512]
-        constexpr auto m_bEnabled = 0x814; // bool
-        constexpr auto m_bMaster = 0x815; // bool
-        constexpr auto m_bClientSide = 0x816; // bool
-        constexpr auto m_bExclusive = 0x817; // bool
-        constexpr auto m_bEnabledOnClient = 0x818; // bool[1]
-        constexpr auto m_flCurWeightOnClient = 0x81C; // float32[1]
-        constexpr auto m_bFadingIn = 0x820; // bool[1]
-        constexpr auto m_flFadeStartWeight = 0x824; // float32[1]
-        constexpr auto m_flFadeStartTime = 0x828; // float32[1]
-        constexpr auto m_flFadeDuration = 0x82C; // float32[1]
+        constexpr auto m_vecOrigin = 0x5F0; // VectorWS  MNotSaved
+        constexpr auto m_MinFalloff = 0x5FC; // float32  MNotSaved
+        constexpr auto m_MaxFalloff = 0x600; // float32  MNotSaved
+        constexpr auto m_flFadeInDuration = 0x604; // float32  MNotSaved
+        constexpr auto m_flFadeOutDuration = 0x608; // float32  MNotSaved
+        constexpr auto m_flMaxWeight = 0x60C; // float32  MNotSaved
+        constexpr auto m_flCurWeight = 0x610; // float32  MNotSaved
+        constexpr auto m_netlookupFilename = 0x614; // char[512]  MNotSaved
+        constexpr auto m_bEnabled = 0x814; // bool  MNotSaved
+        constexpr auto m_bMaster = 0x815; // bool  MNotSaved
+        constexpr auto m_bClientSide = 0x816; // bool  MNotSaved
+        constexpr auto m_bExclusive = 0x817; // bool  MNotSaved
+        constexpr auto m_bEnabledOnClient = 0x818; // bool[1]  MNotSaved
+        constexpr auto m_flCurWeightOnClient = 0x81C; // float32[1]  MNotSaved
+        constexpr auto m_bFadingIn = 0x820; // bool[1]  MNotSaved
+        constexpr auto m_flFadeStartWeight = 0x824; // float32[1]  MNotSaved
+        constexpr auto m_flFadeStartTime = 0x828; // float32[1]  MNotSaved
+        constexpr auto m_flFadeDuration = 0x82C; // float32[1]  MNotSaved
     }
     // AnimGraph2SerializedPoseRecipeSlot_t  size 0x40
     namespace AnimGraph2SerializedPoseRecipeSlot_t {
-        constexpr auto m_topology = 0x30; // CUtlBinaryBlock
+        constexpr auto m_topology = 0x30; // CUtlBinaryBlock  MNotSaved
     }
     // CBuoyancyHelper  size 0x118
     namespace CBuoyancyHelper {
-        constexpr auto m_pController = 0x8; // IPhysicsMotionController*
+        constexpr auto m_pController = 0x8; // IPhysicsMotionController*  MPhysPtr
         constexpr auto m_nFluidType = 0x18; // CUtlStringToken
         constexpr auto m_flFluidDensity = 0x1C; // float32
         constexpr auto m_flNeutrallyBuoyantGravity = 0x20; // float32
@@ -7091,20 +7091,20 @@ namespace client_dll {
         constexpr auto m_flRadius = 0x608; // float32
         constexpr auto m_soundEventName = 0x610; // CGameSoundEventName
         constexpr auto m_bOverrideWithEvent = 0x618; // bool
-        constexpr auto m_soundscapeIndex = 0x61C; // int32
-        constexpr auto m_soundscapeEntityListId = 0x620; // int32
+        constexpr auto m_soundscapeIndex = 0x61C; // int32  MNotSaved
+        constexpr auto m_soundscapeEntityListId = 0x620; // int32  MNotSaved
         constexpr auto m_positionNames = 0x628; // CUtlSymbolLarge[8]
         constexpr auto m_hProxySoundscape = 0x668; // CHandle< CEnvSoundscape >
         constexpr auto m_bDisabled = 0x66C; // bool
         constexpr auto m_soundscapeName = 0x670; // CUtlSymbolLarge
-        constexpr auto m_soundEventHash = 0x678; // uint32
+        constexpr auto m_soundEventHash = 0x678; // uint32  MNotSaved
     }
     // C_SoundEventEntityAlias_snd_event_point : C_SoundEventEntity  size 0x6B0
     namespace C_SoundEventEntityAlias_snd_event_point {
     }
     // C_FogController : C_BaseEntity  size 0x660
     namespace C_FogController {
-        constexpr auto m_fog = 0x5F0; // fogparams_t
+        constexpr auto m_fog = 0x5F0; // fogparams_t  MNotSaved
         constexpr auto m_bUseAngles = 0x658; // bool
         constexpr auto m_iChangedVariables = 0x65C; // int32
     }
@@ -7978,7 +7978,7 @@ namespace client_dll {
     }
     // C_SoundEventPathCornerEntity : C_SoundEventMultiPointEntity  size 0x6C8
     namespace C_SoundEventPathCornerEntity {
-        constexpr auto m_vecCornerPairsNetworked = 0x6B0; // C_NetworkUtlVectorBase< SoundeventPathCornerPairNetworked_t >
+        constexpr auto m_vecCornerPairsNetworked = 0x6B0; // C_NetworkUtlVectorBase< SoundeventPathCornerPairNetworked_t >  MNotSaved
     }
     // C_InfoVisibilityBox : C_BaseEntity  size 0x608
     namespace C_InfoVisibilityBox {
@@ -8237,7 +8237,7 @@ namespace client_dll {
         constexpr auto m_flRadius = 0x628; // float32
         constexpr auto m_ColorTint = 0x62C; // Color
         constexpr auto m_nEffectState = 0x630; // int32
-        constexpr auto m_iEffectIndex = 0x638; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+        constexpr auto m_iEffectIndex = 0x638; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >  MNotSaved
         constexpr auto m_PathNodes_Position = 0x640; // C_NetworkUtlVectorBase< Vector >
         constexpr auto m_PathNodes_TangentIn = 0x658; // C_NetworkUtlVectorBase< Vector >
         constexpr auto m_PathNodes_TangentOut = 0x670; // C_NetworkUtlVectorBase< Vector >
@@ -8647,7 +8647,7 @@ namespace client_dll {
     // PulseNodeDynamicOutflows_t::DynamicOutflow_t  size 0x50
     namespace PulseNodeDynamicOutflows_t::DynamicOutflow_t {
         constexpr auto m_OutflowID = 0x0; // CGlobalSymbol
-        constexpr auto m_Connection = 0x8; // CPulse_OutflowConnection
+        constexpr auto m_Connection = 0x8; // CPulse_OutflowConnection  MFgdFromSchemaCompletelySkipField
     }
     // CDOTA_BaseNPC_Seasonal_TI11_Balloon_Dire : CDOTA_BaseNPC_Seasonal_TI11_Balloon  size 0x19B0
     namespace CDOTA_BaseNPC_Seasonal_TI11_Balloon_Dire {
@@ -9113,7 +9113,7 @@ namespace client_dll {
     }
     // C_PointClientUIHUD : C_BaseClientUIEntity  size 0xC80
     namespace C_PointClientUIHUD {
-        constexpr auto m_bCheckCSSClasses = 0xAC0; // bool
+        constexpr auto m_bCheckCSSClasses = 0xAC0; // bool  MNotSaved
         constexpr auto m_bIgnoreInput = 0xC38; // bool
         constexpr auto m_flWidth = 0xC3C; // float32
         constexpr auto m_flHeight = 0xC40; // float32
@@ -9588,7 +9588,7 @@ namespace client_dll {
         constexpr auto m_bListenedTo = 0xB08; // bool
         constexpr auto m_sndCommentary = 0xB10; // CSoundPatch*
         constexpr auto m_hViewPosition = 0xB18; // CHandle< C_BaseEntity >
-        constexpr auto m_bRestartAfterRestore = 0xB1C; // bool
+        constexpr auto m_bRestartAfterRestore = 0xB1C; // bool  MNotSaved
     }
     // C_DOTA_Item_MadstoneBundle : C_DOTA_Item  size 0x758
     namespace C_DOTA_Item_MadstoneBundle {
@@ -10170,9 +10170,9 @@ namespace client_dll {
     }
     // C_World : C_BaseModelEntity  size 0xAC8
     namespace C_World {
-        constexpr auto m_skyBoxFaces = 0xA88; // CStrongHandle< InfoForResourceTypeIMaterial2 >[6]
-        constexpr auto m_hHeightFogTexture = 0xAB8; // CStrongHandle< InfoForResourceTypeCTextureBase >
-        constexpr auto m_hHeightFogMaskTexture = 0xAC0; // CStrongHandle< InfoForResourceTypeCTextureBase >
+        constexpr auto m_skyBoxFaces = 0xA88; // CStrongHandle< InfoForResourceTypeIMaterial2 >[6]  MNotSaved
+        constexpr auto m_hHeightFogTexture = 0xAB8; // CStrongHandle< InfoForResourceTypeCTextureBase >  MNotSaved
+        constexpr auto m_hHeightFogMaskTexture = 0xAC0; // CStrongHandle< InfoForResourceTypeCTextureBase >  MNotSaved
     }
     // C_DOTA_Item_Recipe_Penta_Edged_Sword : C_DOTA_Item  size 0x758
     namespace C_DOTA_Item_Recipe_Penta_Edged_Sword {
@@ -10528,7 +10528,7 @@ namespace client_dll {
     }
     // CPulseCell_WaitForCursorsWithTagBase : CPulseCell_BaseYieldingInflow  size 0x128
     namespace CPulseCell_WaitForCursorsWithTagBase {
-        constexpr auto m_nCursorsAllowedToWait = 0xD8; // int32
+        constexpr auto m_nCursorsAllowedToWait = 0xD8; // int32  MPropertyDescription
         constexpr auto m_WaitComplete = 0xE0; // CPulse_ResumePoint
     }
     // C_DOTA_Unit_Hero_Oracle : C_DOTA_BaseNPC_Hero  size 0x1D88
@@ -10764,15 +10764,15 @@ namespace client_dll {
         constexpr auto m_OldColor = 0x10; // Color
         constexpr auto m_flOldStart = 0x14; // float32
         constexpr auto m_flOldEnd = 0x18; // float32
-        constexpr auto m_flOldMaxDensity = 0x1C; // float32
-        constexpr auto m_flOldHDRColorScale = 0x20; // float32
-        constexpr auto m_flOldFarZ = 0x24; // float32
+        constexpr auto m_flOldMaxDensity = 0x1C; // float32  MNotSaved
+        constexpr auto m_flOldHDRColorScale = 0x20; // float32  MNotSaved
+        constexpr auto m_flOldFarZ = 0x24; // float32  MNotSaved
         constexpr auto m_NewColor = 0x28; // Color
         constexpr auto m_flNewStart = 0x2C; // float32
         constexpr auto m_flNewEnd = 0x30; // float32
-        constexpr auto m_flNewMaxDensity = 0x34; // float32
-        constexpr auto m_flNewHDRColorScale = 0x38; // float32
-        constexpr auto m_flNewFarZ = 0x3C; // float32
+        constexpr auto m_flNewMaxDensity = 0x34; // float32  MNotSaved
+        constexpr auto m_flNewHDRColorScale = 0x38; // float32  MNotSaved
+        constexpr auto m_flNewFarZ = 0x3C; // float32  MNotSaved
     }
     // C_DOTA_Item_Mysterious_Hat : C_DOTA_Item  size 0x758
     namespace C_DOTA_Item_Mysterious_Hat {
@@ -10896,11 +10896,11 @@ namespace client_dll {
     }
     // CGameSceneNode  size 0x150
     namespace CGameSceneNode {
-        constexpr auto m_nodeToWorld = 0x10; // CTransformWS
-        constexpr auto m_pOwner = 0x30; // CEntityInstance*
-        constexpr auto m_pParent = 0x38; // CGameSceneNode*
-        constexpr auto m_pChild = 0x40; // CGameSceneNode*
-        constexpr auto m_pNextSibling = 0x48; // CGameSceneNode*
+        constexpr auto m_nodeToWorld = 0x10; // CTransformWS  MNotSaved
+        constexpr auto m_pOwner = 0x30; // CEntityInstance*  MNotSaved
+        constexpr auto m_pParent = 0x38; // CGameSceneNode*  MNotSaved
+        constexpr auto m_pChild = 0x40; // CGameSceneNode*  MNotSaved
+        constexpr auto m_pNextSibling = 0x48; // CGameSceneNode*  MNotSaved
         constexpr auto m_hParent = 0x70; // CGameSceneNodeHandle
         constexpr auto m_vecOrigin = 0x90; // CNetworkOriginCellCoordQuantizedVector
         constexpr auto m_angRotation = 0xC8; // QAngle
@@ -10908,25 +10908,25 @@ namespace client_dll {
         constexpr auto m_vecAbsOrigin = 0xD8; // VectorWS
         constexpr auto m_angAbsRotation = 0xE4; // QAngle
         constexpr auto m_flAbsScale = 0xF0; // float32
-        constexpr auto m_vecWrappedLocalOrigin = 0xF4; // Vector
-        constexpr auto m_angWrappedLocalRotation = 0x100; // QAngle
-        constexpr auto m_flWrappedScale = 0x10C; // float32
-        constexpr auto m_nParentAttachmentOrBone = 0x110; // int16
-        constexpr auto m_bDebugAbsOriginChanges = 0x112; // bool
+        constexpr auto m_vecWrappedLocalOrigin = 0xF4; // Vector  MNotSaved
+        constexpr auto m_angWrappedLocalRotation = 0x100; // QAngle  MNotSaved
+        constexpr auto m_flWrappedScale = 0x10C; // float32  MNotSaved
+        constexpr auto m_nParentAttachmentOrBone = 0x110; // int16  MNotSaved
+        constexpr auto m_bDebugAbsOriginChanges = 0x112; // bool  MNotSaved
         constexpr auto m_bDormant = 0x113; // bool
         constexpr auto m_bForceParentToBeNetworked = 0x114; // bool
-        constexpr auto m_bDirtyHierarchy = 0x0; // bitfield:1
-        constexpr auto m_bDirtyBoneMergeInfo = 0x0; // bitfield:1
-        constexpr auto m_bNetworkedPositionChanged = 0x0; // bitfield:1
-        constexpr auto m_bNetworkedAnglesChanged = 0x0; // bitfield:1
-        constexpr auto m_bNetworkedScaleChanged = 0x0; // bitfield:1
-        constexpr auto m_bWillBeCallingPostDataUpdate = 0x0; // bitfield:1
-        constexpr auto m_bBoneMergeFlex = 0x0; // bitfield:1
-        constexpr auto m_nLatchAbsOrigin = 0x0; // bitfield:2
-        constexpr auto m_bDirtyBoneMergeBoneToRoot = 0x0; // bitfield:1
-        constexpr auto m_nHierarchicalDepth = 0x117; // uint8
-        constexpr auto m_nHierarchyType = 0x118; // uint8
-        constexpr auto m_nDoNotSetAnimTimeInInvalidatePhysicsCount = 0x119; // uint8
+        constexpr auto m_bDirtyHierarchy = 0x0; // bitfield:1  MNotSaved
+        constexpr auto m_bDirtyBoneMergeInfo = 0x0; // bitfield:1  MNotSaved
+        constexpr auto m_bNetworkedPositionChanged = 0x0; // bitfield:1  MNotSaved
+        constexpr auto m_bNetworkedAnglesChanged = 0x0; // bitfield:1  MNotSaved
+        constexpr auto m_bNetworkedScaleChanged = 0x0; // bitfield:1  MNotSaved
+        constexpr auto m_bWillBeCallingPostDataUpdate = 0x0; // bitfield:1  MNotSaved
+        constexpr auto m_bBoneMergeFlex = 0x0; // bitfield:1  MNotSaved
+        constexpr auto m_nLatchAbsOrigin = 0x0; // bitfield:2  MNotSaved
+        constexpr auto m_bDirtyBoneMergeBoneToRoot = 0x0; // bitfield:1  MNotSaved
+        constexpr auto m_nHierarchicalDepth = 0x117; // uint8  MNotSaved
+        constexpr auto m_nHierarchyType = 0x118; // uint8  MNotSaved
+        constexpr auto m_nDoNotSetAnimTimeInInvalidatePhysicsCount = 0x119; // uint8  MNotSaved
         constexpr auto m_name = 0x11C; // CUtlStringToken
         constexpr auto m_hierarchyAttachName = 0x130; // CUtlStringToken
         constexpr auto m_flZOffset = 0x134; // float32
@@ -11034,8 +11034,8 @@ namespace client_dll {
         constexpr auto m_hObserverTarget = 0x4C; // CHandle< C_BaseEntity >
         constexpr auto m_iObserverLastMode = 0x50; // ObserverMode_t
         constexpr auto m_bForcedObserverMode = 0x54; // bool
-        constexpr auto m_flObserverChaseDistance = 0x58; // float32
-        constexpr auto m_flObserverChaseDistanceCalcTime = 0x5C; // GameTime_t
+        constexpr auto m_flObserverChaseDistance = 0x58; // float32  MNotSaved
+        constexpr auto m_flObserverChaseDistanceCalcTime = 0x5C; // GameTime_t  MNotSaved
     }
     // C_DOTA_Unit_Hero_Treant : C_DOTA_BaseNPC_Hero  size 0x1D80
     namespace C_DOTA_Unit_Hero_Treant {
@@ -11068,7 +11068,7 @@ namespace client_dll {
     // C_SoundAreaEntityBase : C_BaseEntity  size 0x618
     namespace C_SoundAreaEntityBase {
         constexpr auto m_bDisabled = 0x5F0; // bool
-        constexpr auto m_bWasEnabled = 0x5F8; // bool
+        constexpr auto m_bWasEnabled = 0x5F8; // bool  MNotSaved
         constexpr auto m_iszSoundAreaType = 0x600; // CUtlSymbolLarge
         constexpr auto m_vPos = 0x608; // Vector
     }
@@ -11632,7 +11632,7 @@ namespace client_dll {
     }
     // C_GameRules  size 0x40
     namespace C_GameRules {
-        constexpr auto __m_pChainEntity = 0x8; // CNetworkVarChainer
+        constexpr auto __m_pChainEntity = 0x8; // CNetworkVarChainer  MNotSaved
         constexpr auto m_nTotalPausedTicks = 0x30; // int32
         constexpr auto m_nPauseStartTick = 0x34; // int32
         constexpr auto m_bGamePaused = 0x38; // bool
@@ -11778,25 +11778,25 @@ namespace client_dll {
     }
     // C_PointWorldText : C_ModelPointEntity  size 0xD60
     namespace C_PointWorldText {
-        constexpr auto m_bForceRecreateNextUpdate = 0xA90; // bool
+        constexpr auto m_bForceRecreateNextUpdate = 0xA90; // bool  MNotSaved
         constexpr auto m_nTextWidthPx = 0xAA8; // int32
         constexpr auto m_nTextHeightPx = 0xAAC; // int32
         constexpr auto m_messageText = 0xAB0; // char[512]
-        constexpr auto m_FontName = 0xCB0; // char[64]
-        constexpr auto m_BackgroundMaterialName = 0xCF0; // char[64]
-        constexpr auto m_bEnabled = 0xD30; // bool
-        constexpr auto m_bFullbright = 0xD31; // bool
-        constexpr auto m_flWorldUnitsPerPx = 0xD34; // float32
-        constexpr auto m_flFontSize = 0xD38; // float32
-        constexpr auto m_flDepthOffset = 0xD3C; // float32
-        constexpr auto m_bDrawBackground = 0xD40; // bool
-        constexpr auto m_flBackgroundBorderWidth = 0xD44; // float32
-        constexpr auto m_flBackgroundBorderHeight = 0xD48; // float32
-        constexpr auto m_flBackgroundWorldToUV = 0xD4C; // float32
-        constexpr auto m_Color = 0xD50; // Color
-        constexpr auto m_nJustifyHorizontal = 0xD54; // PointWorldTextJustifyHorizontal_t
-        constexpr auto m_nJustifyVertical = 0xD58; // PointWorldTextJustifyVertical_t
-        constexpr auto m_nReorientMode = 0xD5C; // PointWorldTextReorientMode_t
+        constexpr auto m_FontName = 0xCB0; // char[64]  MNotSaved
+        constexpr auto m_BackgroundMaterialName = 0xCF0; // char[64]  MNotSaved
+        constexpr auto m_bEnabled = 0xD30; // bool  MNotSaved
+        constexpr auto m_bFullbright = 0xD31; // bool  MNotSaved
+        constexpr auto m_flWorldUnitsPerPx = 0xD34; // float32  MNotSaved
+        constexpr auto m_flFontSize = 0xD38; // float32  MNotSaved
+        constexpr auto m_flDepthOffset = 0xD3C; // float32  MNotSaved
+        constexpr auto m_bDrawBackground = 0xD40; // bool  MNotSaved
+        constexpr auto m_flBackgroundBorderWidth = 0xD44; // float32  MNotSaved
+        constexpr auto m_flBackgroundBorderHeight = 0xD48; // float32  MNotSaved
+        constexpr auto m_flBackgroundWorldToUV = 0xD4C; // float32  MNotSaved
+        constexpr auto m_Color = 0xD50; // Color  MNotSaved
+        constexpr auto m_nJustifyHorizontal = 0xD54; // PointWorldTextJustifyHorizontal_t  MNotSaved
+        constexpr auto m_nJustifyVertical = 0xD58; // PointWorldTextJustifyVertical_t  MNotSaved
+        constexpr auto m_nReorientMode = 0xD5C; // PointWorldTextReorientMode_t  MNotSaved
     }
     // C_DOTA_Ability_CDOTA_Ability_Special_Bonus_Unique_Chen_7 : C_DOTABaseAbility  size 0x6A8
     namespace C_DOTA_Ability_CDOTA_Ability_Special_Bonus_Unique_Chen_7 {
@@ -11912,46 +11912,46 @@ namespace client_dll {
     }
     // C_RopeKeyframe : C_BaseModelEntity  size 0xDF8
     namespace C_RopeKeyframe {
-        constexpr auto m_LinksTouchingSomething = 0xA90; // CBitVec< 10 >
-        constexpr auto m_nLinksTouchingSomething = 0xA94; // int32
-        constexpr auto m_bApplyWind = 0xA98; // bool
-        constexpr auto m_fPrevLockedPoints = 0xA9C; // int32
-        constexpr auto m_iForcePointMoveCounter = 0xAA0; // int32
-        constexpr auto m_bPrevEndPointPos = 0xAA4; // bool[2]
-        constexpr auto m_vPrevEndPointPos = 0xAA8; // VectorWS[2]
-        constexpr auto m_flCurScroll = 0xAC0; // float32
-        constexpr auto m_flScrollSpeed = 0xAC4; // float32
-        constexpr auto m_RopeFlags = 0xAC8; // uint16
-        constexpr auto m_iRopeMaterialModelIndex = 0xAD0; // CStrongHandle< InfoForResourceTypeIMaterial2 >
-        constexpr auto m_nSegments = 0xD48; // uint8
-        constexpr auto m_hStartPoint = 0xD4C; // CHandle< C_BaseEntity >
-        constexpr auto m_hEndPoint = 0xD50; // CHandle< C_BaseEntity >
-        constexpr auto m_iStartAttachment = 0xD54; // AttachmentHandle_t
-        constexpr auto m_iEndAttachment = 0xD55; // AttachmentHandle_t
-        constexpr auto m_Subdiv = 0xD56; // uint8
-        constexpr auto m_RopeLength = 0xD58; // int16
-        constexpr auto m_Slack = 0xD5A; // int16
-        constexpr auto m_TextureScale = 0xD5C; // float32
-        constexpr auto m_fLockedPoints = 0xD60; // uint8
-        constexpr auto m_nChangeCount = 0xD61; // uint8
-        constexpr auto m_Width = 0xD64; // float32
-        constexpr auto m_PhysicsDelegate = 0xD68; // C_RopeKeyframe::CPhysicsDelegate
-        constexpr auto m_hMaterial = 0xD78; // CStrongHandle< InfoForResourceTypeIMaterial2 >
-        constexpr auto m_TextureHeight = 0xD80; // int32
-        constexpr auto m_vecImpulse = 0xD84; // Vector
-        constexpr auto m_vecPreviousImpulse = 0xD90; // Vector
-        constexpr auto m_flCurrentGustTimer = 0xD9C; // float32
-        constexpr auto m_flCurrentGustLifetime = 0xDA0; // float32
-        constexpr auto m_flTimeToNextGust = 0xDA4; // float32
-        constexpr auto m_vWindDir = 0xDA8; // Vector
-        constexpr auto m_vColorMod = 0xDB4; // Vector
-        constexpr auto m_vCachedEndPointAttachmentPos = 0xDC0; // VectorWS[2]
-        constexpr auto m_vCachedEndPointAttachmentAngle = 0xDD8; // QAngle[2]
-        constexpr auto m_bConstrainBetweenEndpoints = 0xDF0; // bool
-        constexpr auto m_bEndPointAttachmentPositionsDirty = 0x0; // bitfield:1
-        constexpr auto m_bEndPointAttachmentAnglesDirty = 0x0; // bitfield:1
-        constexpr auto m_bNewDataThisFrame = 0x0; // bitfield:1
-        constexpr auto m_bPhysicsInitted = 0x0; // bitfield:1
+        constexpr auto m_LinksTouchingSomething = 0xA90; // CBitVec< 10 >  MNotSaved
+        constexpr auto m_nLinksTouchingSomething = 0xA94; // int32  MNotSaved
+        constexpr auto m_bApplyWind = 0xA98; // bool  MNotSaved
+        constexpr auto m_fPrevLockedPoints = 0xA9C; // int32  MNotSaved
+        constexpr auto m_iForcePointMoveCounter = 0xAA0; // int32  MNotSaved
+        constexpr auto m_bPrevEndPointPos = 0xAA4; // bool[2]  MNotSaved
+        constexpr auto m_vPrevEndPointPos = 0xAA8; // VectorWS[2]  MNotSaved
+        constexpr auto m_flCurScroll = 0xAC0; // float32  MNotSaved
+        constexpr auto m_flScrollSpeed = 0xAC4; // float32  MNotSaved
+        constexpr auto m_RopeFlags = 0xAC8; // uint16  MNotSaved
+        constexpr auto m_iRopeMaterialModelIndex = 0xAD0; // CStrongHandle< InfoForResourceTypeIMaterial2 >  MNotSaved
+        constexpr auto m_nSegments = 0xD48; // uint8  MNotSaved
+        constexpr auto m_hStartPoint = 0xD4C; // CHandle< C_BaseEntity >  MNotSaved
+        constexpr auto m_hEndPoint = 0xD50; // CHandle< C_BaseEntity >  MNotSaved
+        constexpr auto m_iStartAttachment = 0xD54; // AttachmentHandle_t  MNotSaved
+        constexpr auto m_iEndAttachment = 0xD55; // AttachmentHandle_t  MNotSaved
+        constexpr auto m_Subdiv = 0xD56; // uint8  MNotSaved
+        constexpr auto m_RopeLength = 0xD58; // int16  MNotSaved
+        constexpr auto m_Slack = 0xD5A; // int16  MNotSaved
+        constexpr auto m_TextureScale = 0xD5C; // float32  MNotSaved
+        constexpr auto m_fLockedPoints = 0xD60; // uint8  MNotSaved
+        constexpr auto m_nChangeCount = 0xD61; // uint8  MNotSaved
+        constexpr auto m_Width = 0xD64; // float32  MNotSaved
+        constexpr auto m_PhysicsDelegate = 0xD68; // C_RopeKeyframe::CPhysicsDelegate  MNotSaved
+        constexpr auto m_hMaterial = 0xD78; // CStrongHandle< InfoForResourceTypeIMaterial2 >  MNotSaved
+        constexpr auto m_TextureHeight = 0xD80; // int32  MNotSaved
+        constexpr auto m_vecImpulse = 0xD84; // Vector  MNotSaved
+        constexpr auto m_vecPreviousImpulse = 0xD90; // Vector  MNotSaved
+        constexpr auto m_flCurrentGustTimer = 0xD9C; // float32  MNotSaved
+        constexpr auto m_flCurrentGustLifetime = 0xDA0; // float32  MNotSaved
+        constexpr auto m_flTimeToNextGust = 0xDA4; // float32  MNotSaved
+        constexpr auto m_vWindDir = 0xDA8; // Vector  MNotSaved
+        constexpr auto m_vColorMod = 0xDB4; // Vector  MNotSaved
+        constexpr auto m_vCachedEndPointAttachmentPos = 0xDC0; // VectorWS[2]  MNotSaved
+        constexpr auto m_vCachedEndPointAttachmentAngle = 0xDD8; // QAngle[2]  MNotSaved
+        constexpr auto m_bConstrainBetweenEndpoints = 0xDF0; // bool  MNotSaved
+        constexpr auto m_bEndPointAttachmentPositionsDirty = 0x0; // bitfield:1  MNotSaved
+        constexpr auto m_bEndPointAttachmentAnglesDirty = 0x0; // bitfield:1  MNotSaved
+        constexpr auto m_bNewDataThisFrame = 0x0; // bitfield:1  MNotSaved
+        constexpr auto m_bPhysicsInitted = 0x0; // bitfield:1  MNotSaved
     }
     // C_BaseToggle : C_BaseModelEntity  size 0xA88
     namespace C_BaseToggle {
@@ -12683,8 +12683,8 @@ namespace client_dll {
     }
     // CPulseCell_IntervalTimer : CPulseCell_BaseYieldingInflow  size 0x168
     namespace CPulseCell_IntervalTimer {
-        constexpr auto m_Completed = 0xD8; // CPulse_ResumePoint
-        constexpr auto m_OnInterval = 0x120; // SignatureOutflow_Continue
+        constexpr auto m_Completed = 0xD8; // CPulse_ResumePoint  MPropertyDescription
+        constexpr auto m_OnInterval = 0x120; // SignatureOutflow_Continue  MPropertyDescription
     }
     // C_DOTA_Unit_Hero_Skywrath_Mage : C_DOTA_BaseNPC_Hero  size 0x1D80
     namespace C_DOTA_Unit_Hero_Skywrath_Mage {
@@ -12970,14 +12970,14 @@ namespace client_dll {
     }
     // C_BasePropDoor : C_DynamicProp  size 0xD50
     namespace C_BasePropDoor {
-        constexpr auto m_eDoorState = 0xD20; // DoorState_t
-        constexpr auto m_modelChanged = 0xD24; // bool
-        constexpr auto m_bLocked = 0xD25; // bool
-        constexpr auto m_bNoNPCs = 0xD26; // bool
-        constexpr auto m_closedPosition = 0xD28; // VectorWS
-        constexpr auto m_closedAngles = 0xD34; // QAngle
-        constexpr auto m_hMaster = 0xD40; // CHandle< C_BasePropDoor >
-        constexpr auto m_vWhereToSetLightingOrigin = 0xD44; // VectorWS
+        constexpr auto m_eDoorState = 0xD20; // DoorState_t  MNotSaved
+        constexpr auto m_modelChanged = 0xD24; // bool  MNotSaved
+        constexpr auto m_bLocked = 0xD25; // bool  MNotSaved
+        constexpr auto m_bNoNPCs = 0xD26; // bool  MNotSaved
+        constexpr auto m_closedPosition = 0xD28; // VectorWS  MNotSaved
+        constexpr auto m_closedAngles = 0xD34; // QAngle  MNotSaved
+        constexpr auto m_hMaster = 0xD40; // CHandle< C_BasePropDoor >  MNotSaved
+        constexpr auto m_vWhereToSetLightingOrigin = 0xD44; // VectorWS  MNotSaved
     }
     // C_DOTAWorldParticleSystem : C_BaseModelEntity  size 0xAD0
     namespace C_DOTAWorldParticleSystem {
@@ -13717,7 +13717,7 @@ namespace client_dll {
     }
     // C_BaseModelEntity : C_BaseEntity  size 0xA88
     namespace C_BaseModelEntity {
-        constexpr auto m_CRenderComponent = 0x5F8; // CRenderComponent*
+        constexpr auto m_CRenderComponent = 0x5F8; // CRenderComponent*  MNotSaved
         constexpr auto m_CHitboxComponent = 0x600; // CHitboxComponent
         constexpr auto m_pChoreoComponent = 0x618; // CChoreoComponent*
         constexpr auto m_nDestructiblePartInitialStateDestructed0 = 0x620; // HitGroup_t
@@ -13736,12 +13736,12 @@ namespace client_dll {
         constexpr auto m_bDestructiblePartInitialStateDestructed3_GenerateBreakpieces = 0x64B; // bool
         constexpr auto m_bDestructiblePartInitialStateDestructed4_GenerateBreakpieces = 0x64C; // bool
         constexpr auto m_pDestructiblePartsSystemComponent = 0x650; // CDestructiblePartsComponent*
-        constexpr auto m_bInitModelEffects = 0x778; // bool
-        constexpr auto m_bDoingModelEffects = 0x779; // bool
-        constexpr auto m_bIsStaticProp = 0x77A; // bool
+        constexpr auto m_bInitModelEffects = 0x778; // bool  MNotSaved
+        constexpr auto m_bDoingModelEffects = 0x779; // bool  MNotSaved
+        constexpr auto m_bIsStaticProp = 0x77A; // bool  MNotSaved
         constexpr auto m_iViewerID = 0x77C; // int32
         constexpr auto m_iTeamVisibilityBitmask = 0x780; // int32
-        constexpr auto m_iOldHealth = 0x784; // int32
+        constexpr auto m_iOldHealth = 0x784; // int32  MNotSaved
         constexpr auto m_nRenderMode = 0x788; // RenderMode_t
         constexpr auto m_bVisibilityDirtyFlag = 0x789; // bool
         constexpr auto m_nRenderFX = 0x78A; // RenderFx_t
@@ -13761,10 +13761,10 @@ namespace client_dll {
         constexpr auto m_nRequiredDecalRtEncoding = 0x95D; // DecalRtEncoding_t
         constexpr auto m_bodyGroupChoices = 0x960; // CUtlOrderedMap< CGlobalSymbol, int32 >
         constexpr auto m_vecViewOffset = 0x988; // CNetworkViewOffsetVector
-        constexpr auto m_pClientAlphaProperty = 0xA68; // CClientAlphaProperty*
-        constexpr auto m_ClientOverrideTint = 0xA70; // Color
-        constexpr auto m_bUseClientOverrideTint = 0xA74; // bool
-        constexpr auto m_bvDisabledHitGroups = 0xA78; // uint32[1]
+        constexpr auto m_pClientAlphaProperty = 0xA68; // CClientAlphaProperty*  MNotSaved
+        constexpr auto m_ClientOverrideTint = 0xA70; // Color  MNotSaved
+        constexpr auto m_bUseClientOverrideTint = 0xA74; // bool  MNotSaved
+        constexpr auto m_bvDisabledHitGroups = 0xA78; // uint32[1]  MKV3TransferSaveOpsForField
     }
     // C_DOTA_Ability_CDOTA_Ability_Special_Bonus_Unique_Nevermore_3 : C_DOTABaseAbility  size 0x6A8
     namespace C_DOTA_Ability_CDOTA_Ability_Special_Bonus_Unique_Nevermore_3 {
@@ -14243,86 +14243,86 @@ namespace client_dll {
     // C_BaseEntity : CEntityInstance  size 0x5F0
     namespace C_BaseEntity {
         constexpr auto m_CBodyComponent = 0x30; // CBodyComponent*
-        constexpr auto m_NetworkTransmitComponent = 0x38; // CNetworkTransmitComponent
-        constexpr auto m_nLastThinkTick = 0x328; // GameTick_t
-        constexpr auto m_pGameSceneNode = 0x330; // CGameSceneNode*
-        constexpr auto m_pRenderComponent = 0x338; // CRenderComponent*
-        constexpr auto m_pCollision = 0x340; // CCollisionProperty*
-        constexpr auto m_iMaxHealth = 0x348; // int32
+        constexpr auto m_NetworkTransmitComponent = 0x38; // CNetworkTransmitComponent  MNotSaved
+        constexpr auto m_nLastThinkTick = 0x328; // GameTick_t  MNotSaved
+        constexpr auto m_pGameSceneNode = 0x330; // CGameSceneNode*  MNotSaved
+        constexpr auto m_pRenderComponent = 0x338; // CRenderComponent*  MNotSaved
+        constexpr auto m_pCollision = 0x340; // CCollisionProperty*  MNotSaved
+        constexpr auto m_iMaxHealth = 0x348; // int32  MNotSaved
         constexpr auto m_iHealth = 0x34C; // int32
-        constexpr auto m_flDamageAccumulator = 0x350; // float32
-        constexpr auto m_lifeState = 0x354; // uint8
+        constexpr auto m_flDamageAccumulator = 0x350; // float32  MNotSaved
+        constexpr auto m_lifeState = 0x354; // uint8  MNotSaved
         constexpr auto m_takedamage = 0x355; // DamageOptions_t
-        constexpr auto m_bTakesDamage = 0x356; // bool
-        constexpr auto m_nTakeDamageFlags = 0x358; // TakeDamageFlags_t
+        constexpr auto m_bTakesDamage = 0x356; // bool  MNotSaved
+        constexpr auto m_nTakeDamageFlags = 0x358; // TakeDamageFlags_t  MNotSaved
         constexpr auto m_nPlatformType = 0x360; // EntityPlatformTypes_t
-        constexpr auto m_ubInterpolationFrame = 0x361; // uint8
+        constexpr auto m_ubInterpolationFrame = 0x361; // uint8  MNotSaved
         constexpr auto m_hSceneObjectController = 0x364; // CHandle< C_BaseEntity >
-        constexpr auto m_nNoInterpolationTick = 0x368; // int32
-        constexpr auto m_nVisibilityNoInterpolationTick = 0x36C; // int32
-        constexpr auto m_flProxyRandomValue = 0x370; // float32
-        constexpr auto m_iEFlags = 0x374; // int32
-        constexpr auto m_nWaterType = 0x378; // uint8
-        constexpr auto m_bInterpolateEvenWithNoModel = 0x379; // bool
-        constexpr auto m_bPredictionEligible = 0x37A; // bool
-        constexpr auto m_bApplyLayerMatchIDToModel = 0x37B; // bool
-        constexpr auto m_tokLayerMatchID = 0x37C; // CUtlStringToken
+        constexpr auto m_nNoInterpolationTick = 0x368; // int32  MNotSaved
+        constexpr auto m_nVisibilityNoInterpolationTick = 0x36C; // int32  MNotSaved
+        constexpr auto m_flProxyRandomValue = 0x370; // float32  MNotSaved
+        constexpr auto m_iEFlags = 0x374; // int32  MNotSaved
+        constexpr auto m_nWaterType = 0x378; // uint8  MNotSaved
+        constexpr auto m_bInterpolateEvenWithNoModel = 0x379; // bool  MNotSaved
+        constexpr auto m_bPredictionEligible = 0x37A; // bool  MNotSaved
+        constexpr auto m_bApplyLayerMatchIDToModel = 0x37B; // bool  MNotSaved
+        constexpr auto m_tokLayerMatchID = 0x37C; // CUtlStringToken  MNotSaved
         constexpr auto m_nSubclassID = 0x380; // CUtlStringToken
-        constexpr auto m_nSimulationTick = 0x390; // int32
-        constexpr auto m_iCurrentThinkContext = 0x394; // int32
-        constexpr auto m_aThinkFunctions = 0x398; // CUtlVector< thinkfunc_t >
+        constexpr auto m_nSimulationTick = 0x390; // int32  MNotSaved
+        constexpr auto m_iCurrentThinkContext = 0x394; // int32  MNotSaved
+        constexpr auto m_aThinkFunctions = 0x398; // CUtlVector< thinkfunc_t >  MNotSaved
         constexpr auto m_bDisabledContextThinks = 0x3B0; // bool
-        constexpr auto m_flAnimTime = 0x3B4; // float32
-        constexpr auto m_flSimulationTime = 0x3B8; // float32
+        constexpr auto m_flAnimTime = 0x3B4; // float32  MNotSaved
+        constexpr auto m_flSimulationTime = 0x3B8; // float32  MNotSaved
         constexpr auto m_nSceneObjectOverrideFlags = 0x3BC; // uint8
-        constexpr auto m_bHasSuccessfullyInterpolated = 0x3BD; // bool
-        constexpr auto m_bHasAddedVarsToInterpolation = 0x3BE; // bool
-        constexpr auto m_bRenderEvenWhenNotSuccessfullyInterpolated = 0x3BF; // bool
-        constexpr auto m_nInterpolationLatchDirtyFlags = 0x3C0; // int32[2]
-        constexpr auto m_ListEntry = 0x3C8; // uint16[11]
-        constexpr auto m_flCreateTime = 0x3E0; // GameTime_t
-        constexpr auto m_EntClientFlags = 0x3E4; // uint16
-        constexpr auto m_bClientSideRagdoll = 0x3E6; // bool
-        constexpr auto m_iTeamNum = 0x3E7; // uint8
+        constexpr auto m_bHasSuccessfullyInterpolated = 0x3BD; // bool  MNotSaved
+        constexpr auto m_bHasAddedVarsToInterpolation = 0x3BE; // bool  MNotSaved
+        constexpr auto m_bRenderEvenWhenNotSuccessfullyInterpolated = 0x3BF; // bool  MNotSaved
+        constexpr auto m_nInterpolationLatchDirtyFlags = 0x3C0; // int32[2]  MNotSaved
+        constexpr auto m_ListEntry = 0x3C8; // uint16[11]  MNotSaved
+        constexpr auto m_flCreateTime = 0x3E0; // GameTime_t  MNotSaved
+        constexpr auto m_EntClientFlags = 0x3E4; // uint16  MNotSaved
+        constexpr auto m_bClientSideRagdoll = 0x3E6; // bool  MNotSaved
+        constexpr auto m_iTeamNum = 0x3E7; // uint8  MNotSaved
         constexpr auto m_spawnflags = 0x3E8; // uint32
-        constexpr auto m_nNextThinkTick = 0x3EC; // GameTick_t
-        constexpr auto m_fFlags = 0x3F4; // uint32
-        constexpr auto m_vecAbsVelocity = 0x3F8; // Vector
-        constexpr auto m_vecServerVelocity = 0x404; // CNetworkVelocityVector
+        constexpr auto m_nNextThinkTick = 0x3EC; // GameTick_t  MNotSaved
+        constexpr auto m_fFlags = 0x3F4; // uint32  MSaveBehavior
+        constexpr auto m_vecAbsVelocity = 0x3F8; // Vector  MNotSaved
+        constexpr auto m_vecServerVelocity = 0x404; // CNetworkVelocityVector  MNotSaved
         constexpr auto m_vecVelocity = 0x430; // CNetworkVelocityVector
-        constexpr auto m_hEffectEntity = 0x510; // CHandle< C_BaseEntity >
+        constexpr auto m_hEffectEntity = 0x510; // CHandle< C_BaseEntity >  MNotSaved
         constexpr auto m_hOwnerEntity = 0x514; // CHandle< C_BaseEntity >
-        constexpr auto m_MoveCollide = 0x518; // MoveCollide_t
+        constexpr auto m_MoveCollide = 0x518; // MoveCollide_t  MNotSaved
         constexpr auto m_MoveType = 0x519; // MoveType_t
         constexpr auto m_nActualMoveType = 0x51A; // MoveType_t
-        constexpr auto m_flWaterLevel = 0x51C; // float32
-        constexpr auto m_fEffects = 0x520; // uint32
-        constexpr auto m_hGroundEntity = 0x524; // CHandle< C_BaseEntity >
-        constexpr auto m_nGroundBodyIndex = 0x528; // int32
-        constexpr auto m_flFriction = 0x52C; // float32
-        constexpr auto m_flElasticity = 0x530; // float32
-        constexpr auto m_flGravityScale = 0x534; // float32
-        constexpr auto m_flTimeScale = 0x538; // float32
-        constexpr auto m_bAnimatedEveryTick = 0x53C; // bool
+        constexpr auto m_flWaterLevel = 0x51C; // float32  MNotSaved
+        constexpr auto m_fEffects = 0x520; // uint32  MNotSaved
+        constexpr auto m_hGroundEntity = 0x524; // CHandle< C_BaseEntity >  MNotSaved
+        constexpr auto m_nGroundBodyIndex = 0x528; // int32  MNotSaved
+        constexpr auto m_flFriction = 0x52C; // float32  MNotSaved
+        constexpr auto m_flElasticity = 0x530; // float32  MNotSaved
+        constexpr auto m_flGravityScale = 0x534; // float32  MNotSaved
+        constexpr auto m_flTimeScale = 0x538; // float32  MNotSaved
+        constexpr auto m_bAnimatedEveryTick = 0x53C; // bool  MNotSaved
         constexpr auto m_bGravityDisabled = 0x53D; // bool
-        constexpr auto m_flNavIgnoreUntilTime = 0x540; // GameTime_t
-        constexpr auto m_hThink = 0x544; // uint16
-        constexpr auto m_fBBoxVisFlags = 0x550; // uint8
+        constexpr auto m_flNavIgnoreUntilTime = 0x540; // GameTime_t  MNotSaved
+        constexpr auto m_hThink = 0x544; // uint16  MNotSaved
+        constexpr auto m_fBBoxVisFlags = 0x550; // uint8  MNotSaved
         constexpr auto m_flActualGravityScale = 0x554; // float32
         constexpr auto m_bGravityActuallyDisabled = 0x558; // bool
-        constexpr auto m_bPredictable = 0x559; // bool
+        constexpr auto m_bPredictable = 0x559; // bool  MNotSaved
         constexpr auto m_bRenderWithViewModels = 0x55A; // bool
-        constexpr auto m_nFirstPredictableCommand = 0x55C; // int32
-        constexpr auto m_nLastPredictableCommand = 0x560; // int32
-        constexpr auto m_hOldMoveParent = 0x564; // CHandle< C_BaseEntity >
-        constexpr auto m_Particles = 0x568; // CParticleProperty
+        constexpr auto m_nFirstPredictableCommand = 0x55C; // int32  MNotSaved
+        constexpr auto m_nLastPredictableCommand = 0x560; // int32  MNotSaved
+        constexpr auto m_hOldMoveParent = 0x564; // CHandle< C_BaseEntity >  MNotSaved
+        constexpr auto m_Particles = 0x568; // CParticleProperty  MNotSaved
         constexpr auto m_vecAngVelocity = 0x598; // QAngle
-        constexpr auto m_DataChangeEventRef = 0x5A4; // int32
-        constexpr auto m_dependencies = 0x5A8; // CUtlVector< CEntityHandle >
-        constexpr auto m_nCreationTick = 0x5C0; // int32
-        constexpr auto m_bAnimTimeChanged = 0x5D1; // bool
-        constexpr auto m_bSimulationTimeChanged = 0x5D2; // bool
-        constexpr auto m_sUniqueHammerID = 0x5E0; // CUtlString
+        constexpr auto m_DataChangeEventRef = 0x5A4; // int32  MNotSaved
+        constexpr auto m_dependencies = 0x5A8; // CUtlVector< CEntityHandle >  MNotSaved
+        constexpr auto m_nCreationTick = 0x5C0; // int32  MNotSaved
+        constexpr auto m_bAnimTimeChanged = 0x5D1; // bool  MNotSaved
+        constexpr auto m_bSimulationTimeChanged = 0x5D2; // bool  MNotSaved
+        constexpr auto m_sUniqueHammerID = 0x5E0; // CUtlString  MNotSaved
         constexpr auto m_nBloodType = 0x5E8; // BloodType
     }
     // ActiveModelConfig_t  size 0x70
@@ -14479,19 +14479,19 @@ namespace client_dll {
         constexpr auto m_iHideHUD = 0xBC8; // uint32
         constexpr auto m_skybox3d = 0xBD0; // sky3dparams_t
         constexpr auto m_flDeathTime = 0xC60; // GameTime_t
-        constexpr auto m_vecPredictionError = 0xC64; // Vector
-        constexpr auto m_flPredictionErrorTime = 0xC70; // GameTime_t
-        constexpr auto m_vecLastCameraSetupLocalOrigin = 0xC90; // Vector
-        constexpr auto m_flLastCameraSetupTime = 0xC9C; // GameTime_t
-        constexpr auto m_flFOVSensitivityAdjust = 0xCA0; // float32
-        constexpr auto m_flMouseSensitivity = 0xCA4; // float32
-        constexpr auto m_vOldOrigin = 0xCA8; // Vector
-        constexpr auto m_flOldSimulationTime = 0xCB4; // float32
-        constexpr auto m_nLastExecutedCommandNumber = 0xCB8; // int32
-        constexpr auto m_nLastExecutedCommandTick = 0xCBC; // int32
+        constexpr auto m_vecPredictionError = 0xC64; // Vector  MNotSaved
+        constexpr auto m_flPredictionErrorTime = 0xC70; // GameTime_t  MNotSaved
+        constexpr auto m_vecLastCameraSetupLocalOrigin = 0xC90; // Vector  MNotSaved
+        constexpr auto m_flLastCameraSetupTime = 0xC9C; // GameTime_t  MNotSaved
+        constexpr auto m_flFOVSensitivityAdjust = 0xCA0; // float32  MNotSaved
+        constexpr auto m_flMouseSensitivity = 0xCA4; // float32  MNotSaved
+        constexpr auto m_vOldOrigin = 0xCA8; // Vector  MNotSaved
+        constexpr auto m_flOldSimulationTime = 0xCB4; // float32  MNotSaved
+        constexpr auto m_nLastExecutedCommandNumber = 0xCB8; // int32  MNotSaved
+        constexpr auto m_nLastExecutedCommandTick = 0xCBC; // int32  MNotSaved
         constexpr auto m_hController = 0xCC0; // CHandle< CBasePlayerController >
         constexpr auto m_hDefaultController = 0xCC4; // CHandle< CBasePlayerController >
-        constexpr auto m_bIsSwappingToPredictableController = 0xCC8; // bool
+        constexpr auto m_bIsSwappingToPredictableController = 0xCC8; // bool  MNotSaved
     }
     // C_DOTA_Item_Enhancement_Fierce : C_DOTA_Item  size 0x758
     namespace C_DOTA_Item_Enhancement_Fierce {
@@ -14968,7 +14968,7 @@ namespace client_dll {
         constexpr auto m_iszSoundName = 0x688; // CUtlSymbolLarge
         constexpr auto m_hSource = 0x6A4; // CEntityHandle
         constexpr auto m_nEntityIndexSelection = 0x6A8; // int32
-        constexpr auto m_bClientSideOnly = 0x0; // bitfield:1
+        constexpr auto m_bClientSideOnly = 0x0; // bitfield:1  MNotSaved
     }
     // C_DOTA_Ability_CDOTA_Ability_Special_Bonus_Unique_Tusk_4 : C_DOTABaseAbility  size 0x6A8
     namespace C_DOTA_Ability_CDOTA_Ability_Special_Bonus_Unique_Tusk_4 {
@@ -15526,10 +15526,10 @@ namespace client_dll {
     // CSkeletonInstance : CGameSceneNode  size 0x4B0
     namespace CSkeletonInstance {
         constexpr auto m_modelState = 0x160; // CModelState
-        constexpr auto m_bUseParentRenderBounds = 0x410; // bool
+        constexpr auto m_bUseParentRenderBounds = 0x410; // bool  MNotSaved
         constexpr auto m_bDisableSolidCollisionsForHierarchy = 0x411; // bool
-        constexpr auto m_bDirtyMotionType = 0x412; // bool
-        constexpr auto m_bIsGeneratingLatchedParentSpaceState = 0x413; // bool
+        constexpr auto m_bDirtyMotionType = 0x412; // bool  MNotSaved
+        constexpr auto m_bIsGeneratingLatchedParentSpaceState = 0x413; // bool  MNotSaved
         constexpr auto m_materialGroup = 0x418; // CUtlStringToken
         constexpr auto m_nHitboxSet = 0x41C; // uint8
     }
@@ -16394,7 +16394,7 @@ namespace client_dll {
         constexpr auto m_vecCSSClasses = 0x638; // C_NetworkUtlVectorBase< CUtlSymbolLarge >
         constexpr auto m_szTargetsName = 0x650; // CUtlSymbolLarge
         constexpr auto m_AdditionalTargetEntities = 0x658; // CUtlVector< CHandle< C_BaseModelEntity > >
-        constexpr auto m_bCheckCSSClasses = 0x7D0; // bool
+        constexpr auto m_bCheckCSSClasses = 0x7D0; // bool  MNotSaved
     }
     // CDOTA_Modifier_AghsFort_Spectre_ActiveDispersion_Thinker : CDOTA_Buff  size 0x1AB0
     namespace CDOTA_Modifier_AghsFort_Spectre_ActiveDispersion_Thinker {
@@ -16999,12 +16999,12 @@ namespace client_dll {
         constexpr auto m_iszEntityFilterName = 0x600; // CUtlSymbolLarge
         constexpr auto m_flTimeoutInterval = 0x608; // float32
         constexpr auto m_bAsynchronouslySpawnEntities = 0x60C; // bool
-        constexpr auto m_clientOnlyEntityBehavior = 0x610; // PointTemplateClientOnlyEntityBehavior_t
-        constexpr auto m_ownerSpawnGroupType = 0x614; // PointTemplateOwnerSpawnGroupType_t
+        constexpr auto m_clientOnlyEntityBehavior = 0x610; // PointTemplateClientOnlyEntityBehavior_t  MNotSaved
+        constexpr auto m_ownerSpawnGroupType = 0x614; // PointTemplateOwnerSpawnGroupType_t  MNotSaved
         constexpr auto m_createdSpawnGroupHandles = 0x618; // CUtlVector< uint32 >
         constexpr auto m_SpawnedEntityHandles = 0x630; // CUtlVector< CEntityHandle >
-        constexpr auto m_ScriptSpawnCallback = 0x648; // HSCRIPT
-        constexpr auto m_ScriptCallbackScope = 0x650; // HSCRIPT
+        constexpr auto m_ScriptSpawnCallback = 0x648; // HSCRIPT  MNotSaved
+        constexpr auto m_ScriptCallbackScope = 0x650; // HSCRIPT  MNotSaved
         constexpr auto m_OnEntitySpawned = 0x658; // CEntityOutputTemplate< CUtlVector< CEntityHandle > >
     }
     // C_DOTA_Ability_PudgeMiniboss_ArmorCorruption : C_DOTABaseAbility  size 0x6A8
@@ -18409,7 +18409,7 @@ namespace client_dll {
     namespace PhysicsRagdollPose_t {
         constexpr auto m_Transforms = 0x8; // C_NetworkUtlVectorBase< CTransform >
         constexpr auto m_hOwner = 0x20; // CHandle< C_BaseEntity >
-        constexpr auto m_bSetFromDebugHistory = 0x24; // bool
+        constexpr auto m_bSetFromDebugHistory = 0x24; // bool  MNotSaved
     }
     // CPropDataComponent : CEntityComponent  size 0x40
     namespace CPropDataComponent {
@@ -18689,13 +18689,13 @@ namespace client_dll {
     }
     // C_DynamicLight : C_BaseModelEntity  size 0xAB0
     namespace C_DynamicLight {
-        constexpr auto m_Flags = 0xA88; // uint8
-        constexpr auto m_LightStyle = 0xA89; // uint8
-        constexpr auto m_Radius = 0xA8C; // float32
-        constexpr auto m_Exponent = 0xA90; // int32
-        constexpr auto m_InnerAngle = 0xA94; // float32
-        constexpr auto m_OuterAngle = 0xA98; // float32
-        constexpr auto m_SpotRadius = 0xA9C; // float32
+        constexpr auto m_Flags = 0xA88; // uint8  MNotSaved
+        constexpr auto m_LightStyle = 0xA89; // uint8  MNotSaved
+        constexpr auto m_Radius = 0xA8C; // float32  MNotSaved
+        constexpr auto m_Exponent = 0xA90; // int32  MNotSaved
+        constexpr auto m_InnerAngle = 0xA94; // float32  MNotSaved
+        constexpr auto m_OuterAngle = 0xA98; // float32  MNotSaved
+        constexpr auto m_SpotRadius = 0xA9C; // float32  MNotSaved
     }
     // C_DOTA_Ability_Special_Bonus_30_Crit_2 : C_DOTABaseAbility  size 0x6A8
     namespace C_DOTA_Ability_Special_Bonus_30_Crit_2 {
@@ -18762,7 +18762,7 @@ namespace client_dll {
     // EngineCountdownTimer  size 0x18
     namespace EngineCountdownTimer {
         constexpr auto m_duration = 0x8; // float32
-        constexpr auto m_timestamp = 0xC; // float32
+        constexpr auto m_timestamp = 0xC; // float32  MKV3TransferSaveOpsForField
         constexpr auto m_timescale = 0x10; // float32
     }
     // C_DOTA_Item_WindLace : C_DOTA_Item  size 0x758
@@ -19371,11 +19371,11 @@ namespace client_dll {
     }
     // C_GlobalLight : C_BaseEntity  size 0xB40
     namespace C_GlobalLight {
-        constexpr auto m_WindClothForceHandle = 0xB10; // uint16
+        constexpr auto m_WindClothForceHandle = 0xB10; // uint16  MNotSaved
     }
     // C_EnvWindClientside : C_BaseEntity  size 0x6E8
     namespace C_EnvWindClientside {
-        constexpr auto m_EnvWindShared = 0x5F0; // C_EnvWindShared
+        constexpr auto m_EnvWindShared = 0x5F0; // C_EnvWindShared  MNotSaved
     }
     // CDOTA_Modifier_HeavensHalberd_Debuff : CDOTA_Buff  size 0x1A60
     namespace CDOTA_Modifier_HeavensHalberd_Debuff {
@@ -19437,9 +19437,9 @@ namespace client_dll {
     namespace sky3dparams_t {
         constexpr auto scale = 0x8; // int16
         constexpr auto origin = 0xC; // VectorWS
-        constexpr auto bClip3DSkyBoxNearToWorldFar = 0x18; // bool
-        constexpr auto flClip3DSkyBoxNearToWorldFarOffset = 0x1C; // float32
-        constexpr auto fog = 0x20; // fogparams_t
+        constexpr auto bClip3DSkyBoxNearToWorldFar = 0x18; // bool  MNotSaved
+        constexpr auto flClip3DSkyBoxNearToWorldFarOffset = 0x1C; // float32  MNotSaved
+        constexpr auto fog = 0x20; // fogparams_t  MNotSaved
         constexpr auto m_nWorldGroupID = 0x88; // WorldGroupId_t
     }
     // CDOTA_FightingGame_EffectsEntity : C_BaseModelEntity  size 0xA88
@@ -19635,7 +19635,7 @@ namespace client_dll {
     }
     // CDestructiblePartsComponent  size 0x70
     namespace CDestructiblePartsComponent {
-        constexpr auto __m_pChainEntity = 0x0; // CNetworkVarChainer
+        constexpr auto __m_pChainEntity = 0x0; // CNetworkVarChainer  MNotSaved
         constexpr auto m_vecDamageTakenByHitGroup = 0x48; // CUtlVector< uint16 >
         constexpr auto m_hOwner = 0x60; // CHandle< C_BaseModelEntity >
         constexpr auto m_pAnimGraphDestructibleGraphController = 0x68; // CAnimGraphControllerPtr
@@ -19701,7 +19701,7 @@ namespace client_dll {
     }
     // C_EnvWind : C_BaseEntity  size 0x6E8
     namespace C_EnvWind {
-        constexpr auto m_EnvWindShared = 0x5F0; // C_EnvWindShared
+        constexpr auto m_EnvWindShared = 0x5F0; // C_EnvWindShared  MNotSaved
     }
     // CDOTA_Modifier_Seasonal_TI11_RockPaperScissors_Playing : CDOTA_Buff  size 0x1A60
     namespace CDOTA_Modifier_Seasonal_TI11_RockPaperScissors_Playing {
@@ -20192,8 +20192,8 @@ namespace client_dll {
     }
     // CPulseCell_BaseYieldingInflow : CPulseCell_BaseFlow  size 0xD8
     namespace CPulseCell_BaseYieldingInflow {
-        constexpr auto m_BaseFlow_OnAfterCancel = 0x48; // CPulse_ResumePoint
-        constexpr auto m_BaseFlow_WhileActive = 0x90; // CPulse_ResumePoint
+        constexpr auto m_BaseFlow_OnAfterCancel = 0x48; // CPulse_ResumePoint  MPulseFGDSkipField
+        constexpr auto m_BaseFlow_WhileActive = 0x90; // CPulse_ResumePoint  MPulseFGDSkipField
     }
     // PulseNodeDynamicOutflows_t  size 0x18
     namespace PulseNodeDynamicOutflows_t {
@@ -20320,9 +20320,9 @@ namespace client_dll {
     namespace CPlayer_MovementServices_Humanoid {
         constexpr auto m_flStepSoundTime = 0x258; // float32
         constexpr auto m_flFallVelocity = 0x25C; // float32
-        constexpr auto m_groundNormal = 0x260; // Vector
+        constexpr auto m_groundNormal = 0x260; // Vector  MNotSaved
         constexpr auto m_flSurfaceFriction = 0x26C; // float32
-        constexpr auto m_surfaceProps = 0x270; // CUtlStringToken
+        constexpr auto m_surfaceProps = 0x270; // CUtlStringToken  MNotSaved
         constexpr auto m_nStepside = 0x280; // int32
     }
     // C_DOTA_Unit_Hero_Necrolyte : C_DOTA_BaseNPC_Hero  size 0x1D80
@@ -20519,11 +20519,11 @@ namespace client_dll {
     }
     // C_PhysPropClientside : C_BreakableProp  size 0xC60
     namespace C_PhysPropClientside {
-        constexpr auto m_flTouchDelta = 0xC30; // GameTime_t
-        constexpr auto m_fDeathTime = 0xC34; // GameTime_t
-        constexpr auto m_vecDamagePosition = 0xC38; // VectorWS
-        constexpr auto m_vecDamageDirection = 0xC44; // Vector
-        constexpr auto m_nDamageType = 0xC50; // DamageTypes_t
+        constexpr auto m_flTouchDelta = 0xC30; // GameTime_t  MNotSaved
+        constexpr auto m_fDeathTime = 0xC34; // GameTime_t  MNotSaved
+        constexpr auto m_vecDamagePosition = 0xC38; // VectorWS  MNotSaved
+        constexpr auto m_vecDamageDirection = 0xC44; // Vector  MNotSaved
+        constexpr auto m_nDamageType = 0xC50; // DamageTypes_t  MNotSaved
     }
     // CDOTA_Item_Forage_Health : CDOTA_Item_Forage_Base  size 0x758
     namespace CDOTA_Item_Forage_Health {
@@ -20669,7 +20669,7 @@ namespace client_dll {
     }
     // C_BaseDoor : C_BaseToggle  size 0xA90
     namespace C_BaseDoor {
-        constexpr auto m_bIsUsable = 0xA88; // bool
+        constexpr auto m_bIsUsable = 0xA88; // bool  MNotSaved
     }
     // CDOTA_Ability_BotChallenge_SkeletonKing_BoneGuard_DamageTracker : C_DOTABaseAbility  size 0x6A8
     namespace CDOTA_Ability_BotChallenge_SkeletonKing_BoneGuard_DamageTracker {
@@ -21641,7 +21641,7 @@ namespace client_dll {
     namespace CModelState {
         constexpr auto m_hModel = 0xA0; // CStrongHandle< InfoForResourceTypeCModel >
         constexpr auto m_ModelName = 0xA8; // CUtlSymbolLarge
-        constexpr auto m_pVPhysicsAggregate = 0xE0; // IPhysAggregateInstance*
+        constexpr auto m_pVPhysicsAggregate = 0xE0; // IPhysAggregateInstance*  MPhysPtr
         constexpr auto m_flRootBoneOffset_x = 0xE8; // float32
         constexpr auto m_flRootBoneOffset_y = 0xEC; // float32
         constexpr auto m_flRootBoneOffset_z = 0xF0; // float32
@@ -21825,8 +21825,8 @@ namespace client_dll {
     // CCollisionProperty  size 0xB8
     namespace CCollisionProperty {
         constexpr auto m_collisionAttribute = 0x10; // VPhysicsCollisionAttribute_t
-        constexpr auto m_vecMins = 0x40; // Vector
-        constexpr auto m_vecMaxs = 0x4C; // Vector
+        constexpr auto m_vecMins = 0x40; // Vector  MSaveBehavior
+        constexpr auto m_vecMaxs = 0x4C; // Vector  MSaveBehavior
         constexpr auto m_usSolidFlags = 0x5A; // uint8
         constexpr auto m_nSolidType = 0x5B; // SolidType_t
         constexpr auto m_triggerBloat = 0x5C; // uint8
@@ -21939,19 +21939,19 @@ namespace client_dll {
     }
     // C_EntityDissolve : C_BaseModelEntity  size 0xAD0
     namespace C_EntityDissolve {
-        constexpr auto m_flStartTime = 0xA90; // GameTime_t
-        constexpr auto m_flFadeInStart = 0xA94; // float32
-        constexpr auto m_flFadeInLength = 0xA98; // float32
-        constexpr auto m_flFadeOutModelStart = 0xA9C; // float32
-        constexpr auto m_flFadeOutModelLength = 0xAA0; // float32
-        constexpr auto m_flFadeOutStart = 0xAA4; // float32
-        constexpr auto m_flFadeOutLength = 0xAA8; // float32
-        constexpr auto m_nDissolveType = 0xAAC; // EntityDissolveType_t
-        constexpr auto m_nMagnitude = 0xAB0; // uint32
-        constexpr auto m_vDissolverOrigin = 0xAB4; // VectorWS
-        constexpr auto m_flNextSparkTime = 0xAC0; // GameTime_t
-        constexpr auto m_bCoreExplode = 0xAC4; // bool
-        constexpr auto m_bLinkedToServerEnt = 0xAC5; // bool
+        constexpr auto m_flStartTime = 0xA90; // GameTime_t  MNotSaved
+        constexpr auto m_flFadeInStart = 0xA94; // float32  MNotSaved
+        constexpr auto m_flFadeInLength = 0xA98; // float32  MNotSaved
+        constexpr auto m_flFadeOutModelStart = 0xA9C; // float32  MNotSaved
+        constexpr auto m_flFadeOutModelLength = 0xAA0; // float32  MNotSaved
+        constexpr auto m_flFadeOutStart = 0xAA4; // float32  MNotSaved
+        constexpr auto m_flFadeOutLength = 0xAA8; // float32  MNotSaved
+        constexpr auto m_nDissolveType = 0xAAC; // EntityDissolveType_t  MNotSaved
+        constexpr auto m_nMagnitude = 0xAB0; // uint32  MNotSaved
+        constexpr auto m_vDissolverOrigin = 0xAB4; // VectorWS  MNotSaved
+        constexpr auto m_flNextSparkTime = 0xAC0; // GameTime_t  MNotSaved
+        constexpr auto m_bCoreExplode = 0xAC4; // bool  MNotSaved
+        constexpr auto m_bLinkedToServerEnt = 0xAC5; // bool  MNotSaved
     }
     // C_DOTA_Ability_Special_Bonus_Lifesteal_18 : C_DOTABaseAbility  size 0x6A8
     namespace C_DOTA_Ability_Special_Bonus_Lifesteal_18 {
@@ -22961,7 +22961,7 @@ namespace client_dll {
     }
     // CScriptComponent : CEntityComponent  size 0x38
     namespace CScriptComponent {
-        constexpr auto m_scriptClassName = 0x30; // CUtlSymbolLarge
+        constexpr auto m_scriptClassName = 0x30; // CUtlSymbolLarge  MNotSaved
     }
     // C_DOTA_BaseNPC_Trap_Ward : C_DOTA_BaseNPC_Creature  size 0x19C0
     namespace C_DOTA_BaseNPC_Trap_Ward {
@@ -23111,18 +23111,18 @@ namespace client_dll {
         constexpr auto m_bRandomizeCycle = 0xCCC; // bool
         constexpr auto m_bStartDisabled = 0xCCD; // bool
         constexpr auto m_bFiredStartEndOutput = 0xCCE; // bool
-        constexpr auto m_bForceNpcExclude = 0xCCF; // bool
+        constexpr auto m_bForceNpcExclude = 0xCCF; // bool  MNotSaved
         constexpr auto m_bCreateMovableSurfaceGraph = 0xCD0; // bool
-        constexpr auto m_bCreateNonSolid = 0xCD1; // bool
-        constexpr auto m_bIsOverrideProp = 0xCD2; // bool
+        constexpr auto m_bCreateNonSolid = 0xCD1; // bool  MNotSaved
+        constexpr auto m_bIsOverrideProp = 0xCD2; // bool  MNotSaved
         constexpr auto m_iInitialGlowState = 0xCD4; // int32
         constexpr auto m_nGlowRange = 0xCD8; // int32
         constexpr auto m_nGlowRangeMin = 0xCDC; // int32
         constexpr auto m_glowColor = 0xCE0; // Color
         constexpr auto m_nGlowTeam = 0xCE4; // int32
-        constexpr auto m_iCachedFrameCount = 0xCE8; // int32
-        constexpr auto m_vecCachedRenderMins = 0xCEC; // Vector
-        constexpr auto m_vecCachedRenderMaxs = 0xCF8; // Vector
+        constexpr auto m_iCachedFrameCount = 0xCE8; // int32  MNotSaved
+        constexpr auto m_vecCachedRenderMins = 0xCEC; // Vector  MNotSaved
+        constexpr auto m_vecCachedRenderMaxs = 0xCF8; // Vector  MNotSaved
     }
     // C_DOTA_Ability_Special_Bonus_Unique_Batrider_1 : C_DOTABaseAbility  size 0x6A8
     namespace C_DOTA_Ability_Special_Bonus_Unique_Batrider_1 {
@@ -23456,7 +23456,7 @@ namespace client_dll {
         constexpr auto m_hRotationKeys = 0xA98; // CStrongHandle< InfoForResourceTypeCTextureBase >
         constexpr auto m_vAnimationBoundsMin = 0xAA0; // Vector
         constexpr auto m_vAnimationBoundsMax = 0xAAC; // Vector
-        constexpr auto m_flStartTime = 0xAB8; // float32
+        constexpr auto m_flStartTime = 0xAB8; // float32  MNotSaved
         constexpr auto m_flStartFrame = 0xABC; // float32
     }
     // C_LightEnvironmentEntity : C_LightDirectionalEntity  size 0xA90
@@ -23845,13 +23845,13 @@ namespace client_dll {
     // CInfoWorldLayer : C_BaseEntity  size 0x628
     namespace CInfoWorldLayer {
         constexpr auto m_pOutputOnEntitiesSpawned = 0x5F0; // CEntityIOOutput
-        constexpr auto m_worldName = 0x608; // CUtlSymbolLarge
-        constexpr auto m_layerName = 0x610; // CUtlSymbolLarge
+        constexpr auto m_worldName = 0x608; // CUtlSymbolLarge  MNotSaved
+        constexpr auto m_layerName = 0x610; // CUtlSymbolLarge  MNotSaved
         constexpr auto m_bWorldLayerVisible = 0x618; // bool
         constexpr auto m_bEntitiesSpawned = 0x619; // bool
         constexpr auto m_bCreateAsChildSpawnGroup = 0x61A; // bool
-        constexpr auto m_hLayerSpawnGroup = 0x61C; // uint32
-        constexpr auto m_bWorldLayerActuallyVisible = 0x620; // bool
+        constexpr auto m_hLayerSpawnGroup = 0x61C; // uint32  MNotSaved
+        constexpr auto m_bWorldLayerActuallyVisible = 0x620; // bool  MNotSaved
     }
     // CDOTA_Modifier_AghsFort_TrapRoom_MeatHook : CDOTA_Buff  size 0x1A58
     namespace CDOTA_Modifier_AghsFort_TrapRoom_MeatHook {
@@ -24468,9 +24468,9 @@ namespace client_dll {
         constexpr auto m_bActive = 0xC88; // bool
         constexpr auto m_bFrozen = 0xC89; // bool
         constexpr auto m_flFreezeTransitionDuration = 0xC8C; // float32
-        constexpr auto m_nStopType = 0xC90; // int32
+        constexpr auto m_nStopType = 0xC90; // int32  MNotSaved
         constexpr auto m_bAnimateDuringGameplayPause = 0xC94; // bool
-        constexpr auto m_iEffectIndex = 0xC98; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+        constexpr auto m_iEffectIndex = 0xC98; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >  MNotSaved
         constexpr auto m_flStartTime = 0xCA0; // GameTime_t
         constexpr auto m_flPreSimTime = 0xCA4; // float32
         constexpr auto m_vServerControlPoints = 0xCA8; // Vector[4]
@@ -24488,8 +24488,8 @@ namespace client_dll {
         constexpr auto m_vecDataCPValue = 0xFFC; // Vector
         constexpr auto m_nTintCP = 0x1008; // int32
         constexpr auto m_clrTint = 0x100C; // Color
-        constexpr auto m_bOldActive = 0x1030; // bool
-        constexpr auto m_bOldFrozen = 0x1031; // bool
+        constexpr auto m_bOldActive = 0x1030; // bool  MNotSaved
+        constexpr auto m_bOldFrozen = 0x1031; // bool  MNotSaved
     }
     // CDOTA_Ability_Kez_Echo_Slash : C_DOTA_Ability_Kez_BaseAbility  size 0x720
     namespace CDOTA_Ability_Kez_Echo_Slash {
@@ -24889,7 +24889,7 @@ namespace client_dll {
     }
     // CLightComponent : CEntityComponent  size 0x1B8
     namespace CLightComponent {
-        constexpr auto __m_pChainEntity = 0x38; // CNetworkVarChainer
+        constexpr auto __m_pChainEntity = 0x38; // CNetworkVarChainer  MNotSaved
         constexpr auto m_Color = 0x75; // Color
         constexpr auto m_SecondaryColor = 0x79; // Color
         constexpr auto m_flBrightness = 0x80; // float32
@@ -24955,7 +24955,7 @@ namespace client_dll {
         constexpr auto m_flSkyIntensity = 0x194; // float32
         constexpr auto m_SkyAmbientBounce = 0x198; // Color
         constexpr auto m_bUseSecondaryColor = 0x19C; // bool
-        constexpr auto m_bMixedShadows = 0x19D; // bool
+        constexpr auto m_bMixedShadows = 0x19D; // bool  MNotSaved
         constexpr auto m_flLightStyleStartTime = 0x1A0; // GameTime_t
         constexpr auto m_flCapsuleLength = 0x1A4; // float32
         constexpr auto m_flMinRoughness = 0x1A8; // float32
@@ -25176,8 +25176,8 @@ namespace client_dll {
     }
     // CBodyComponent : CEntityComponent  size 0x78
     namespace CBodyComponent {
-        constexpr auto m_pSceneNode = 0x8; // CGameSceneNode*
-        constexpr auto __m_pChainEntity = 0x48; // CNetworkVarChainer
+        constexpr auto m_pSceneNode = 0x8; // CGameSceneNode*  MNotSaved
+        constexpr auto __m_pChainEntity = 0x48; // CNetworkVarChainer  MNotSaved
     }
     // CPulseCell_Inflow_Method : CPulseCell_Inflow_BaseEntrypoint  size 0xC8
     namespace CPulseCell_Inflow_Method {
@@ -25365,12 +25365,12 @@ namespace client_dll {
     }
     // C_BaseCombatCharacter : C_BaseAnimatingOverlay  size 0xB60
     namespace C_BaseCombatCharacter {
-        constexpr auto m_hMyWearables = 0xAC0; // C_NetworkUtlVectorBase< CHandle< C_EconWearable > >
-        constexpr auto m_leftFootAttachment = 0xAF0; // AttachmentHandle_t
-        constexpr auto m_rightFootAttachment = 0xAF1; // AttachmentHandle_t
-        constexpr auto m_nWaterWakeMode = 0xAF4; // C_BaseCombatCharacter::WaterWakeMode_t
-        constexpr auto m_flWaterWorldZ = 0xAF8; // float32
-        constexpr auto m_flWaterNextTraceTime = 0xAFC; // float32
+        constexpr auto m_hMyWearables = 0xAC0; // C_NetworkUtlVectorBase< CHandle< C_EconWearable > >  MNotSaved
+        constexpr auto m_leftFootAttachment = 0xAF0; // AttachmentHandle_t  MNotSaved
+        constexpr auto m_rightFootAttachment = 0xAF1; // AttachmentHandle_t  MNotSaved
+        constexpr auto m_nWaterWakeMode = 0xAF4; // C_BaseCombatCharacter::WaterWakeMode_t  MNotSaved
+        constexpr auto m_flWaterWorldZ = 0xAF8; // float32  MNotSaved
+        constexpr auto m_flWaterNextTraceTime = 0xAFC; // float32  MNotSaved
     }
     // C_DOTATeam : C_Team  size 0x700
     namespace C_DOTATeam {
@@ -25523,16 +25523,16 @@ namespace client_dll {
     }
     // CGlowProperty  size 0x58
     namespace CGlowProperty {
-        constexpr auto m_fGlowColor = 0x8; // Vector
+        constexpr auto m_fGlowColor = 0x8; // Vector  MNotSaved
         constexpr auto m_iGlowType = 0x30; // int32
-        constexpr auto m_iGlowTeam = 0x34; // int32
-        constexpr auto m_nGlowRange = 0x38; // int32
-        constexpr auto m_nGlowRangeMin = 0x3C; // int32
-        constexpr auto m_glowColorOverride = 0x40; // Color
-        constexpr auto m_bFlashing = 0x44; // bool
-        constexpr auto m_flGlowTime = 0x48; // float32
-        constexpr auto m_flGlowStartTime = 0x4C; // float32
-        constexpr auto m_bGlowing = 0x50; // bool
+        constexpr auto m_iGlowTeam = 0x34; // int32  MNotSaved
+        constexpr auto m_nGlowRange = 0x38; // int32  MNotSaved
+        constexpr auto m_nGlowRangeMin = 0x3C; // int32  MNotSaved
+        constexpr auto m_glowColorOverride = 0x40; // Color  MNotSaved
+        constexpr auto m_bFlashing = 0x44; // bool  MNotSaved
+        constexpr auto m_flGlowTime = 0x48; // float32  MNotSaved
+        constexpr auto m_flGlowStartTime = 0x4C; // float32  MNotSaved
+        constexpr auto m_bGlowing = 0x50; // bool  MNotSaved
     }
     // C_DOTA_Item_Enhancement_Dominant : C_DOTA_Item  size 0x758
     namespace C_DOTA_Item_Enhancement_Dominant {
@@ -25775,9 +25775,9 @@ namespace client_dll {
     }
     // CPulseCell_BooleanSwitchState : CPulseCell_BaseState  size 0x1E0
     namespace CPulseCell_BooleanSwitchState {
-        constexpr auto m_Condition = 0xD8; // CPulseObservableExpression< bool >
-        constexpr auto m_WhenTrue = 0x150; // CPulse_OutflowConnection
-        constexpr auto m_WhenFalse = 0x198; // CPulse_OutflowConnection
+        constexpr auto m_Condition = 0xD8; // CPulseObservableExpression< bool >  MPropertyDescription, MPropertyFriendlyName
+        constexpr auto m_WhenTrue = 0x150; // CPulse_OutflowConnection  MPropertyDescription, MPropertyFriendlyName
+        constexpr auto m_WhenFalse = 0x198; // CPulse_OutflowConnection  MPropertyDescription, MPropertyFriendlyName
     }
     // C_DOTA_Unit_Hero_Sniper : C_DOTA_BaseNPC_Hero  size 0x1D80
     namespace C_DOTA_Unit_Hero_Sniper {
@@ -26195,19 +26195,19 @@ namespace client_dll {
     }
     // C_SceneEntity : C_PointEntity  size 0x658
     namespace C_SceneEntity {
-        constexpr auto m_bIsPlayingBack = 0x5F8; // bool
-        constexpr auto m_bPaused = 0x5F9; // bool
-        constexpr auto m_bMultiplayer = 0x5FA; // bool
-        constexpr auto m_bAutogenerated = 0x5FB; // bool
-        constexpr auto m_bAllRequirementsComplete = 0x5FC; // bool
-        constexpr auto m_flForceClientTime = 0x600; // float32
-        constexpr auto m_nSceneStringIndex = 0x604; // uint16
-        constexpr auto m_bClientOnly = 0x606; // bool
-        constexpr auto m_hOwner = 0x608; // CHandle< C_BaseModelEntity >
-        constexpr auto m_hActorList = 0x610; // C_NetworkUtlVectorBase< CHandle< C_BaseModelEntity > >
-        constexpr auto m_bWasPlaying = 0x628; // bool
-        constexpr auto m_QueuedEvents = 0x638; // CUtlVector< C_SceneEntity::QueuedEvents_t >
-        constexpr auto m_flCurrentTime = 0x650; // float32
+        constexpr auto m_bIsPlayingBack = 0x5F8; // bool  MNotSaved
+        constexpr auto m_bPaused = 0x5F9; // bool  MNotSaved
+        constexpr auto m_bMultiplayer = 0x5FA; // bool  MNotSaved
+        constexpr auto m_bAutogenerated = 0x5FB; // bool  MNotSaved
+        constexpr auto m_bAllRequirementsComplete = 0x5FC; // bool  MNotSaved
+        constexpr auto m_flForceClientTime = 0x600; // float32  MNotSaved
+        constexpr auto m_nSceneStringIndex = 0x604; // uint16  MNotSaved
+        constexpr auto m_bClientOnly = 0x606; // bool  MNotSaved
+        constexpr auto m_hOwner = 0x608; // CHandle< C_BaseModelEntity >  MNotSaved
+        constexpr auto m_hActorList = 0x610; // C_NetworkUtlVectorBase< CHandle< C_BaseModelEntity > >  MNotSaved
+        constexpr auto m_bWasPlaying = 0x628; // bool  MNotSaved
+        constexpr auto m_QueuedEvents = 0x638; // CUtlVector< C_SceneEntity::QueuedEvents_t >  MNotSaved
+        constexpr auto m_flCurrentTime = 0x650; // float32  MNotSaved
     }
     // CDOTA_Modifier_PudgeMiniboss_ArmorCorruption : CDOTA_Buff  size 0x1A60
     namespace CDOTA_Modifier_PudgeMiniboss_ArmorCorruption {
@@ -26604,7 +26604,7 @@ namespace client_dll {
         constexpr auto m_flEngageDistance = 0x608; // float32
         constexpr auto m_bRequiresUseKey = 0x60C; // bool
         constexpr auto m_nOutputType = 0x610; // ValueRemapperOutputType_t
-        constexpr auto m_hOutputEntities = 0x618; // C_NetworkUtlVectorBase< CHandle< C_BaseEntity > >
+        constexpr auto m_hOutputEntities = 0x618; // C_NetworkUtlVectorBase< CHandle< C_BaseEntity > >  MNotSaved
         constexpr auto m_nHapticsType = 0x630; // ValueRemapperHapticsType_t
         constexpr auto m_nMomentumType = 0x634; // ValueRemapperMomentumType_t
         constexpr auto m_flMomentumModifier = 0x638; // float32
@@ -28507,7 +28507,7 @@ namespace client_dll {
     }
     // CChoreoComponent  size 0x80
     namespace CChoreoComponent {
-        constexpr auto __m_pChainEntity = 0x8; // CNetworkVarChainer
+        constexpr auto __m_pChainEntity = 0x8; // CNetworkVarChainer  MNotSaved
         constexpr auto m_hOwner = 0x30; // CHandle< C_BaseModelEntity >
         constexpr auto m_nExernalChoreoGraphCount = 0x34; // int32
         constexpr auto m_sActiveExternalChoreoGraphSlotID = 0x38; // CGlobalSymbol
@@ -28647,13 +28647,13 @@ namespace client_dll {
     }
     // C_RagdollPropAttached : C_RagdollProp  size 0xD18
     namespace C_RagdollPropAttached {
-        constexpr auto m_boneIndexAttached = 0xCE0; // uint32
-        constexpr auto m_ragdollAttachedObjectIndex = 0xCE4; // uint32
-        constexpr auto m_attachmentPointBoneSpace = 0xCE8; // Vector
-        constexpr auto m_attachmentPointRagdollSpace = 0xCF4; // Vector
-        constexpr auto m_vecOffset = 0xD00; // Vector
-        constexpr auto m_parentTime = 0xD0C; // float32
-        constexpr auto m_bHasParent = 0xD10; // bool
+        constexpr auto m_boneIndexAttached = 0xCE0; // uint32  MNotSaved
+        constexpr auto m_ragdollAttachedObjectIndex = 0xCE4; // uint32  MNotSaved
+        constexpr auto m_attachmentPointBoneSpace = 0xCE8; // Vector  MNotSaved
+        constexpr auto m_attachmentPointRagdollSpace = 0xCF4; // Vector  MNotSaved
+        constexpr auto m_vecOffset = 0xD00; // Vector  MNotSaved
+        constexpr auto m_parentTime = 0xD0C; // float32  MNotSaved
+        constexpr auto m_bHasParent = 0xD10; // bool  MNotSaved
     }
     // CDOTA_Item_Recipe_Overwhelming_Blink : C_DOTA_Item  size 0x758
     namespace CDOTA_Item_Recipe_Overwhelming_Blink {
@@ -28901,7 +28901,7 @@ namespace client_dll {
         constexpr auto m_flKillStartTime = 0x7C; // GameTime_t
         constexpr auto m_flKillRate = 0x80; // float32
         constexpr auto m_flLayerSuppressChangeTime = 0x84; // GameTime_t
-        constexpr auto m_nActivity = 0x88; // int32
+        constexpr auto m_nActivity = 0x88; // int32  MKV3TransferSaveOpsForField
         constexpr auto m_nPriority = 0x8C; // int32
         constexpr auto m_flLastEventCycle = 0x90; // float32
         constexpr auto m_flFadeInFraction = 0x94; // float32
@@ -29145,9 +29145,9 @@ namespace client_dll {
     }
     // C_FuncTrackTrain : C_BaseModelEntity  size 0xA98
     namespace C_FuncTrackTrain {
-        constexpr auto m_nLongAxis = 0xA88; // int32
-        constexpr auto m_flRadius = 0xA8C; // float32
-        constexpr auto m_flLineLength = 0xA90; // float32
+        constexpr auto m_nLongAxis = 0xA88; // int32  MNotSaved
+        constexpr auto m_flRadius = 0xA8C; // float32  MNotSaved
+        constexpr auto m_flLineLength = 0xA90; // float32  MNotSaved
     }
     // CDOTA_Modifier_Aghsfort_Aziyog_Underlord_Portal_FX : CDOTA_Buff  size 0x1A60
     namespace CDOTA_Modifier_Aghsfort_Aziyog_Underlord_Portal_FX {
@@ -29403,28 +29403,28 @@ namespace client_dll {
         constexpr auto dirPrimary = 0x8; // Vector
         constexpr auto colorPrimary = 0x14; // Color
         constexpr auto colorSecondary = 0x18; // Color
-        constexpr auto colorPrimaryLerpTo = 0x1C; // Color
-        constexpr auto colorSecondaryLerpTo = 0x20; // Color
+        constexpr auto colorPrimaryLerpTo = 0x1C; // Color  MNotSaved
+        constexpr auto colorSecondaryLerpTo = 0x20; // Color  MNotSaved
         constexpr auto start = 0x24; // float32
         constexpr auto end = 0x28; // float32
         constexpr auto farz = 0x2C; // float32
         constexpr auto maxdensity = 0x30; // float32
         constexpr auto exponent = 0x34; // float32
         constexpr auto HDRColorScale = 0x38; // float32
-        constexpr auto skyboxFogFactor = 0x3C; // float32
-        constexpr auto skyboxFogFactorLerpTo = 0x40; // float32
-        constexpr auto startLerpTo = 0x44; // float32
-        constexpr auto endLerpTo = 0x48; // float32
-        constexpr auto maxdensityLerpTo = 0x4C; // float32
-        constexpr auto lerptime = 0x50; // GameTime_t
+        constexpr auto skyboxFogFactor = 0x3C; // float32  MNotSaved
+        constexpr auto skyboxFogFactorLerpTo = 0x40; // float32  MNotSaved
+        constexpr auto startLerpTo = 0x44; // float32  MNotSaved
+        constexpr auto endLerpTo = 0x48; // float32  MNotSaved
+        constexpr auto maxdensityLerpTo = 0x4C; // float32  MNotSaved
+        constexpr auto lerptime = 0x50; // GameTime_t  MNotSaved
         constexpr auto duration = 0x54; // float32
         constexpr auto blendtobackground = 0x58; // float32
         constexpr auto scattering = 0x5C; // float32
         constexpr auto locallightscale = 0x60; // float32
         constexpr auto enable = 0x64; // bool
         constexpr auto blend = 0x65; // bool
-        constexpr auto m_bPadding2 = 0x66; // bool
-        constexpr auto m_bPadding = 0x67; // bool
+        constexpr auto m_bPadding2 = 0x66; // bool  MNotSaved
+        constexpr auto m_bPadding = 0x67; // bool  MNotSaved
     }
     // C_DOTA_Unit_Hero_Undying : C_DOTA_BaseNPC_Hero  size 0x1D80
     namespace C_DOTA_Unit_Hero_Undying {
@@ -29581,7 +29581,7 @@ namespace client_dll {
         constexpr auto m_flFireTime = 0xA90; // GameTime_t
         constexpr auto m_flDamage = 0xA94; // float32
         constexpr auto m_nNumBeamEnts = 0xA98; // uint8
-        constexpr auto m_queryHandleHalo = 0xA9C; // int32
+        constexpr auto m_queryHandleHalo = 0xA9C; // int32  MNotSaved
         constexpr auto m_hBaseMaterial = 0xAC0; // CStrongHandle< InfoForResourceTypeIMaterial2 >
         constexpr auto m_nHaloIndex = 0xAC8; // CStrongHandle< InfoForResourceTypeIMaterial2 >
         constexpr auto m_nBeamType = 0xAD0; // BeamType_t
@@ -29719,9 +29719,9 @@ namespace client_dll {
     namespace CExplosionTypeData {
         constexpr auto m_SoundName = 0x0; // CSoundEventName
         constexpr auto m_ParticleEffect = 0x10; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > >
-        constexpr auto m_bIsIncindiary = 0xF0; // bool
-        constexpr auto m_bHasForces = 0xF1; // bool
-        constexpr auto m_DecalType = 0xF8; // CGlobalSymbol
+        constexpr auto m_bIsIncindiary = 0xF0; // bool  MPropertyDescription
+        constexpr auto m_bHasForces = 0xF1; // bool  MPropertyDescription
+        constexpr auto m_DecalType = 0xF8; // CGlobalSymbol  MPropertyDescription
     }
     // CDOTA_Item_Partisans_Brand : C_DOTA_Item  size 0x758
     namespace CDOTA_Item_Partisans_Brand {
@@ -30404,15 +30404,15 @@ namespace client_dll {
     }
     // C_RagdollProp : CBaseAnimGraph  size 0xCE0
     namespace C_RagdollProp {
-        constexpr auto m_ragEnabled = 0xC58; // C_NetworkUtlVectorBase< bool >
-        constexpr auto m_ragPos = 0xC70; // C_NetworkUtlVectorBase< Vector >
-        constexpr auto m_ragAngles = 0xC88; // C_NetworkUtlVectorBase< QAngle >
-        constexpr auto m_flBlendWeight = 0xCA0; // float32
-        constexpr auto m_hRagdollSource = 0xCA4; // CHandle< C_BaseEntity >
-        constexpr auto m_iEyeAttachment = 0xCA8; // AttachmentHandle_t
-        constexpr auto m_flBlendWeightCurrent = 0xCAC; // float32
-        constexpr auto m_parentPhysicsBoneIndices = 0xCB0; // CUtlVector< int32 >
-        constexpr auto m_worldSpaceBoneComputationOrder = 0xCC8; // CUtlVector< int32 >
+        constexpr auto m_ragEnabled = 0xC58; // C_NetworkUtlVectorBase< bool >  MNotSaved
+        constexpr auto m_ragPos = 0xC70; // C_NetworkUtlVectorBase< Vector >  MNotSaved
+        constexpr auto m_ragAngles = 0xC88; // C_NetworkUtlVectorBase< QAngle >  MNotSaved
+        constexpr auto m_flBlendWeight = 0xCA0; // float32  MNotSaved
+        constexpr auto m_hRagdollSource = 0xCA4; // CHandle< C_BaseEntity >  MNotSaved
+        constexpr auto m_iEyeAttachment = 0xCA8; // AttachmentHandle_t  MNotSaved
+        constexpr auto m_flBlendWeightCurrent = 0xCAC; // float32  MNotSaved
+        constexpr auto m_parentPhysicsBoneIndices = 0xCB0; // CUtlVector< int32 >  MNotSaved
+        constexpr auto m_worldSpaceBoneComputationOrder = 0xCC8; // CUtlVector< int32 >  MNotSaved
     }
     // C_DOTA_Item_AbyssalBlade : C_DOTA_Item  size 0x758
     namespace C_DOTA_Item_AbyssalBlade {
@@ -30916,16 +30916,16 @@ namespace client_dll {
         constexpr auto m_OnLayerCycleUpdated = 0xB30; // CEntityOutputTemplate< float32 >
         constexpr auto m_OnExternalChoreoGraphChanged = 0xB50; // CEntityIOOutput
         constexpr auto m_bAnimGraphUpdateEnabled = 0xB70; // bool
-        constexpr auto m_bAnimationUpdateScheduled = 0xB71; // bool
-        constexpr auto m_vecForce = 0xB74; // Vector
-        constexpr auto m_nForceBone = 0xB80; // int32
-        constexpr auto m_pClientsideRagdoll = 0xB88; // CBaseAnimGraph*
-        constexpr auto m_bBuiltRagdoll = 0xB90; // bool
-        constexpr auto m_pRagdollControl = 0xBA0; // IPhysicsRagdollControl*
+        constexpr auto m_bAnimationUpdateScheduled = 0xB71; // bool  MNotSaved
+        constexpr auto m_vecForce = 0xB74; // Vector  MNotSaved
+        constexpr auto m_nForceBone = 0xB80; // int32  MNotSaved
+        constexpr auto m_pClientsideRagdoll = 0xB88; // CBaseAnimGraph*  MNotSaved
+        constexpr auto m_bBuiltRagdoll = 0xB90; // bool  MNotSaved
+        constexpr auto m_pRagdollControl = 0xBA0; // IPhysicsRagdollControl*  MPhysPtr
         constexpr auto m_RagdollPose = 0xBA8; // PhysicsRagdollPose_t
         constexpr auto m_bRagdollEnabled = 0xBF0; // bool
-        constexpr auto m_bRagdollClientSide = 0xBF1; // bool
-        constexpr auto m_bHasAnimatedMaterialAttributes = 0xC00; // bool
+        constexpr auto m_bRagdollClientSide = 0xBF1; // bool  MNotSaved
+        constexpr auto m_bHasAnimatedMaterialAttributes = 0xC00; // bool  MNotSaved
     }
     // C_DOTA_Item_RippersLash : C_DOTA_Item  size 0x758
     namespace C_DOTA_Item_RippersLash {
@@ -31255,31 +31255,31 @@ namespace client_dll {
     }
     // C_LocalTempEntity : CBaseAnimatingActivity  size 0xB68
     namespace C_LocalTempEntity {
-        constexpr auto flags = 0xAC0; // int32
-        constexpr auto die = 0xAC4; // GameTime_t
-        constexpr auto m_flFrameMax = 0xAC8; // float32
-        constexpr auto x = 0xACC; // float32
-        constexpr auto y = 0xAD0; // float32
-        constexpr auto fadeSpeed = 0xAD4; // float32
-        constexpr auto bounceFactor = 0xAD8; // float32
-        constexpr auto hitSound = 0xADC; // int32
-        constexpr auto priority = 0xAE0; // int32
-        constexpr auto tentOffset = 0xAE4; // Vector
-        constexpr auto m_vecTempEntAngVelocity = 0xAF0; // QAngle
-        constexpr auto tempent_renderamt = 0xAFC; // int32
-        constexpr auto m_vecNormal = 0xB00; // Vector
-        constexpr auto m_flSpriteScale = 0xB0C; // float32
-        constexpr auto m_nFlickerFrame = 0xB10; // int32
-        constexpr auto m_flFrameRate = 0xB14; // float32
-        constexpr auto m_flFrame = 0xB18; // float32
-        constexpr auto m_pszImpactEffect = 0xB20; // char*
-        constexpr auto m_pszParticleEffect = 0xB28; // char*
-        constexpr auto m_bParticleCollision = 0xB30; // bool
-        constexpr auto m_iLastCollisionFrame = 0xB34; // int32
-        constexpr auto m_vLastCollisionOrigin = 0xB38; // VectorWS
-        constexpr auto m_vecTempEntVelocity = 0xB44; // Vector
-        constexpr auto m_vecPrevAbsOrigin = 0xB50; // VectorWS
-        constexpr auto m_vecTempEntAcceleration = 0xB5C; // Vector
+        constexpr auto flags = 0xAC0; // int32  MNotSaved
+        constexpr auto die = 0xAC4; // GameTime_t  MNotSaved
+        constexpr auto m_flFrameMax = 0xAC8; // float32  MNotSaved
+        constexpr auto x = 0xACC; // float32  MNotSaved
+        constexpr auto y = 0xAD0; // float32  MNotSaved
+        constexpr auto fadeSpeed = 0xAD4; // float32  MNotSaved
+        constexpr auto bounceFactor = 0xAD8; // float32  MNotSaved
+        constexpr auto hitSound = 0xADC; // int32  MNotSaved
+        constexpr auto priority = 0xAE0; // int32  MNotSaved
+        constexpr auto tentOffset = 0xAE4; // Vector  MNotSaved
+        constexpr auto m_vecTempEntAngVelocity = 0xAF0; // QAngle  MNotSaved
+        constexpr auto tempent_renderamt = 0xAFC; // int32  MNotSaved
+        constexpr auto m_vecNormal = 0xB00; // Vector  MNotSaved
+        constexpr auto m_flSpriteScale = 0xB0C; // float32  MNotSaved
+        constexpr auto m_nFlickerFrame = 0xB10; // int32  MNotSaved
+        constexpr auto m_flFrameRate = 0xB14; // float32  MNotSaved
+        constexpr auto m_flFrame = 0xB18; // float32  MNotSaved
+        constexpr auto m_pszImpactEffect = 0xB20; // char*  MNotSaved
+        constexpr auto m_pszParticleEffect = 0xB28; // char*  MNotSaved
+        constexpr auto m_bParticleCollision = 0xB30; // bool  MNotSaved
+        constexpr auto m_iLastCollisionFrame = 0xB34; // int32  MNotSaved
+        constexpr auto m_vLastCollisionOrigin = 0xB38; // VectorWS  MNotSaved
+        constexpr auto m_vecTempEntVelocity = 0xB44; // Vector  MNotSaved
+        constexpr auto m_vecPrevAbsOrigin = 0xB50; // VectorWS  MNotSaved
+        constexpr auto m_vecTempEntAcceleration = 0xB5C; // Vector  MNotSaved
     }
     // CDOTA_Item_Panic_Button : C_DOTA_Item  size 0x758
     namespace CDOTA_Item_Panic_Button {
@@ -32154,7 +32154,7 @@ namespace client_dll {
     }
     // CPulseCell_LimitCount : CPulseCell_BaseRequirement  size 0x50
     namespace CPulseCell_LimitCount {
-        constexpr auto m_nLimitCount = 0x48; // int32
+        constexpr auto m_nLimitCount = 0x48; // int32  MPropertyFlattenIntoParentRow
     }
     // CPulseCell_Step_CallExternalMethod : CPulseCell_BaseYieldingInflow  size 0x150
     namespace CPulseCell_Step_CallExternalMethod {
@@ -32515,7 +32515,7 @@ namespace client_dll {
     // CSkyboxReference : C_BaseEntity  size 0x5F8
     namespace CSkyboxReference {
         constexpr auto m_worldGroupId = 0x5F0; // WorldGroupId_t
-        constexpr auto m_hSkyCamera = 0x5F4; // CHandle< C_SkyCamera >
+        constexpr auto m_hSkyCamera = 0x5F4; // CHandle< C_SkyCamera >  MNotSaved
     }
     // C_PortraitWorldPet : C_DynamicProp  size 0xD20
     namespace C_PortraitWorldPet {
@@ -32739,7 +32739,7 @@ namespace client_dll {
         constexpr auto m_TargetFOV = 0x644; // float32
         constexpr auto m_DegreesPerSecond = 0x648; // float32
         constexpr auto m_bIsOn = 0x64C; // bool
-        constexpr auto m_pNext = 0x650; // C_PointCamera*
+        constexpr auto m_pNext = 0x650; // C_PointCamera*  MNotSaved
     }
     // C_DOTA_Ability_CDOTA_Ability_Special_Bonus_Unique_Chen_2 : C_DOTABaseAbility  size 0x6A8
     namespace C_DOTA_Ability_CDOTA_Ability_Special_Bonus_Unique_Chen_2 {
@@ -33369,18 +33369,18 @@ namespace client_dll {
     }
     // CEntityIdentity  size 0x70
     namespace CEntityIdentity {
-        constexpr auto m_nameStringTableIndex = 0x14; // int32
+        constexpr auto m_nameStringTableIndex = 0x14; // int32  MNotSaved
         constexpr auto m_name = 0x18; // CUtlSymbolLarge
-        constexpr auto m_designerName = 0x20; // CUtlSymbolLarge
-        constexpr auto m_flags = 0x30; // uint32
-        constexpr auto m_worldGroupId = 0x38; // WorldGroupId_t
-        constexpr auto m_fDataObjectTypes = 0x3C; // uint32
-        constexpr auto m_PathIndex = 0x40; // ChangeAccessorFieldPathIndex_t
+        constexpr auto m_designerName = 0x20; // CUtlSymbolLarge  MNotSaved
+        constexpr auto m_flags = 0x30; // uint32  MNotSaved
+        constexpr auto m_worldGroupId = 0x38; // WorldGroupId_t  MNotSaved
+        constexpr auto m_fDataObjectTypes = 0x3C; // uint32  MNotSaved
+        constexpr auto m_PathIndex = 0x40; // ChangeAccessorFieldPathIndex_t  MNotSaved
         constexpr auto m_pAttributes = 0x48; // CEntityAttributeTable*
-        constexpr auto m_pPrev = 0x50; // CEntityIdentity*
-        constexpr auto m_pNext = 0x58; // CEntityIdentity*
-        constexpr auto m_pPrevByClass = 0x60; // CEntityIdentity*
-        constexpr auto m_pNextByClass = 0x68; // CEntityIdentity*
+        constexpr auto m_pPrev = 0x50; // CEntityIdentity*  MNotSaved
+        constexpr auto m_pNext = 0x58; // CEntityIdentity*  MNotSaved
+        constexpr auto m_pPrevByClass = 0x60; // CEntityIdentity*  MNotSaved
+        constexpr auto m_pNextByClass = 0x68; // CEntityIdentity*  MNotSaved
     }
     // CPulseCell_LimitCount::Criteria_t  size 0x1
     namespace CPulseCell_LimitCount::Criteria_t {
@@ -33642,21 +33642,21 @@ namespace client_dll {
     }
     // CBasePlayerVData : CEntitySubclassVDataBase  size 0x258
     namespace CBasePlayerVData {
-        constexpr auto m_sModelName = 0x28; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > >
-        constexpr auto m_sModelNameAg2Override = 0x108; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > >
+        constexpr auto m_sModelName = 0x28; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > >  MPropertyProvidesEditContextString
+        constexpr auto m_sModelNameAg2Override = 0x108; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > >  MPropertyProvidesEditContextString
         constexpr auto m_flHeadDamageMultiplier = 0x1E8; // CSkillFloat
         constexpr auto m_flChestDamageMultiplier = 0x1F8; // CSkillFloat
         constexpr auto m_flStomachDamageMultiplier = 0x208; // CSkillFloat
         constexpr auto m_flArmDamageMultiplier = 0x218; // CSkillFloat
         constexpr auto m_flLegDamageMultiplier = 0x228; // CSkillFloat
-        constexpr auto m_flHoldBreathTime = 0x238; // float32
-        constexpr auto m_flDrowningDamageInterval = 0x23C; // float32
-        constexpr auto m_nDrowningDamageInitial = 0x240; // int32
-        constexpr auto m_nDrowningDamageMax = 0x244; // int32
-        constexpr auto m_nWaterSpeed = 0x248; // int32
-        constexpr auto m_flUseRange = 0x24C; // float32
-        constexpr auto m_flUseAngleTolerance = 0x250; // float32
-        constexpr auto m_flCrouchTime = 0x254; // float32
+        constexpr auto m_flHoldBreathTime = 0x238; // float32  MPropertyGroupName
+        constexpr auto m_flDrowningDamageInterval = 0x23C; // float32  MPropertyGroupName, MPropertyDescription
+        constexpr auto m_nDrowningDamageInitial = 0x240; // int32  MPropertyGroupName, MPropertyDescription
+        constexpr auto m_nDrowningDamageMax = 0x244; // int32  MPropertyGroupName, MPropertyDescription
+        constexpr auto m_nWaterSpeed = 0x248; // int32  MPropertyGroupName
+        constexpr auto m_flUseRange = 0x24C; // float32  MPropertyGroupName
+        constexpr auto m_flUseAngleTolerance = 0x250; // float32  MPropertyGroupName
+        constexpr auto m_flCrouchTime = 0x254; // float32  MPropertyGroupName, MPropertyDescription
     }
     // CDOTA_Modifier_Special_Bonus_Gold_Income : CDOTA_Buff  size 0x1A60
     namespace CDOTA_Modifier_Special_Bonus_Gold_Income {
@@ -33802,7 +33802,7 @@ namespace client_dll {
     }
     // CPulseCell_CursorQueue : CPulseCell_WaitForCursorsWithTagBase  size 0x130
     namespace CPulseCell_CursorQueue {
-        constexpr auto m_nCursorsAllowedToRunParallel = 0x128; // int32
+        constexpr auto m_nCursorsAllowedToRunParallel = 0x128; // int32  MPropertyDescription
     }
     // CPulseCell_Value_RandomFloat : CPulseCell_BaseValue  size 0x48
     namespace CPulseCell_Value_RandomFloat {
@@ -33858,8 +33858,8 @@ namespace client_dll {
         constexpr auto m_nStartBrightness = 0xAE0; // int32
         constexpr auto m_nDestBrightness = 0xAE4; // int32
         constexpr auto m_flBrightnessTimeStart = 0xAE8; // GameTime_t
-        constexpr auto m_nSpriteWidth = 0xAF8; // int32
-        constexpr auto m_nSpriteHeight = 0xAFC; // int32
+        constexpr auto m_nSpriteWidth = 0xAF8; // int32  MNotSaved
+        constexpr auto m_nSpriteHeight = 0xAFC; // int32  MNotSaved
         constexpr auto m_flSpeed = 0xB00; // float32
     }
     // C_DotaSubquestBase : C_BaseEntity  size 0x748
@@ -34047,7 +34047,7 @@ namespace client_dll {
     }
     // C_PhysicsProp : C_BreakableProp  size 0xC40
     namespace C_PhysicsProp {
-        constexpr auto m_bAwake = 0xC30; // bool
+        constexpr auto m_bAwake = 0xC30; // bool  MNotSaved
     }
     // CFilterTeam : CBaseFilter  size 0x630
     namespace CFilterTeam {
@@ -34290,39 +34290,39 @@ namespace client_dll {
     }
     // CBasePlayerWeaponVData  size 0x510
     namespace CBasePlayerWeaponVData {
-        constexpr auto m_szClassName = 0x10; // CUtlString
-        constexpr auto m_szWorldModel = 0x18; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > >
-        constexpr auto m_szWorldModelAg2Override = 0xF8; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > >
-        constexpr auto m_sToolsOnlyOwnerModelName = 0x1D8; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > >
-        constexpr auto m_bBuiltRightHanded = 0x2B8; // bool
-        constexpr auto m_bAllowFlipping = 0x2B9; // bool
-        constexpr auto m_sMuzzleAttachment = 0x2C0; // CAttachmentNameSymbolWithStorage
-        constexpr auto m_szMuzzleFlashParticle = 0x2E0; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > >
-        constexpr auto m_szMuzzleFlashParticleConfig = 0x3C0; // CUtlString
-        constexpr auto m_szBarrelSmokeParticle = 0x3C8; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > >
-        constexpr auto m_nMuzzleSmokeShotThreshold = 0x4A8; // uint8
-        constexpr auto m_flMuzzleSmokeTimeout = 0x4AC; // float32
-        constexpr auto m_flMuzzleSmokeDecrementRate = 0x4B0; // float32
+        constexpr auto m_szClassName = 0x10; // CUtlString  MPropertyDescription
+        constexpr auto m_szWorldModel = 0x18; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > >  MPropertyStartGroup, MPropertyDescription, MPropertyProvidesEditContextString
+        constexpr auto m_szWorldModelAg2Override = 0xF8; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > >  MPropertyDescription, MPropertyProvidesEditContextString
+        constexpr auto m_sToolsOnlyOwnerModelName = 0x1D8; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > >  MPropertyDescription
+        constexpr auto m_bBuiltRightHanded = 0x2B8; // bool  MPropertyDescription
+        constexpr auto m_bAllowFlipping = 0x2B9; // bool  MPropertyDescription
+        constexpr auto m_sMuzzleAttachment = 0x2C0; // CAttachmentNameSymbolWithStorage  MPropertyDescription
+        constexpr auto m_szMuzzleFlashParticle = 0x2E0; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > >  MPropertyDescription
+        constexpr auto m_szMuzzleFlashParticleConfig = 0x3C0; // CUtlString  MPropertyDescription, MPropertyAttributeEditor, MPropertyEditContextOverrideKey
+        constexpr auto m_szBarrelSmokeParticle = 0x3C8; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > >  MPropertyDescription
+        constexpr auto m_nMuzzleSmokeShotThreshold = 0x4A8; // uint8  MPropertyDescription
+        constexpr auto m_flMuzzleSmokeTimeout = 0x4AC; // float32  MPropertyDescription
+        constexpr auto m_flMuzzleSmokeDecrementRate = 0x4B0; // float32  MPropertyDescription
         constexpr auto m_bGenerateMuzzleLight = 0x4B4; // bool
-        constexpr auto m_bLinkedCooldowns = 0x4B5; // bool
+        constexpr auto m_bLinkedCooldowns = 0x4B5; // bool  MPropertyStartGroup, MPropertyDescription
         constexpr auto m_iFlags = 0x4B6; // ItemFlagTypes_t
-        constexpr auto m_iWeight = 0x4B8; // int32
-        constexpr auto m_bAutoSwitchTo = 0x4BC; // bool
-        constexpr auto m_bAutoSwitchFrom = 0x4BD; // bool
-        constexpr auto m_nPrimaryAmmoType = 0x4BE; // AmmoIndex_t
-        constexpr auto m_nSecondaryAmmoType = 0x4BF; // AmmoIndex_t
-        constexpr auto m_iMaxClip1 = 0x4C0; // int32
-        constexpr auto m_iMaxClip2 = 0x4C4; // int32
-        constexpr auto m_iDefaultClip1 = 0x4C8; // int32
-        constexpr auto m_iDefaultClip2 = 0x4CC; // int32
-        constexpr auto m_bReserveAmmoAsClips = 0x4D0; // bool
-        constexpr auto m_bTreatAsSingleClip = 0x4D1; // bool
-        constexpr auto m_bKeepLoadedAmmo = 0x4D2; // bool
-        constexpr auto m_iRumbleEffect = 0x4D4; // RumbleEffect_t
+        constexpr auto m_iWeight = 0x4B8; // int32  MPropertyDescription
+        constexpr auto m_bAutoSwitchTo = 0x4BC; // bool  MPropertyFriendlyName, MPropertyDescription
+        constexpr auto m_bAutoSwitchFrom = 0x4BD; // bool  MPropertyFriendlyName
+        constexpr auto m_nPrimaryAmmoType = 0x4BE; // AmmoIndex_t  MPropertyStartGroup, MPropertyAttributeEditor, MPropertyCustomFGDType
+        constexpr auto m_nSecondaryAmmoType = 0x4BF; // AmmoIndex_t  MPropertyAttributeEditor, MPropertyCustomFGDType
+        constexpr auto m_iMaxClip1 = 0x4C0; // int32  MPropertyFriendlyName, MPropertyDescription, MPropertyAttributeRange
+        constexpr auto m_iMaxClip2 = 0x4C4; // int32  MPropertyFriendlyName, MPropertyDescription, MPropertyAttributeRange
+        constexpr auto m_iDefaultClip1 = 0x4C8; // int32  MPropertyDescription, MPropertyAttributeRange
+        constexpr auto m_iDefaultClip2 = 0x4CC; // int32  MPropertyDescription, MPropertyAttributeRange
+        constexpr auto m_bReserveAmmoAsClips = 0x4D0; // bool  MPropertyDescription
+        constexpr auto m_bTreatAsSingleClip = 0x4D1; // bool  MPropertyDescription
+        constexpr auto m_bKeepLoadedAmmo = 0x4D2; // bool  MPropertyDescription
+        constexpr auto m_iRumbleEffect = 0x4D4; // RumbleEffect_t  MPropertyStartGroup
         constexpr auto m_flDropSpeed = 0x4D8; // float32
-        constexpr auto m_iSlot = 0x4DC; // int32
-        constexpr auto m_iPosition = 0x4E0; // int32
-        constexpr auto m_aShootSounds = 0x4E8; // CUtlOrderedMap< WeaponSound_t, CSoundEventName >
+        constexpr auto m_iSlot = 0x4DC; // int32  MPropertyFriendlyName, MPropertyDescription
+        constexpr auto m_iPosition = 0x4E0; // int32  MPropertyFriendlyName, MPropertyDescription
+        constexpr auto m_aShootSounds = 0x4E8; // CUtlOrderedMap< WeaponSound_t, CSoundEventName >  MPropertyStartGroup
     }
     // C_DOTA_Item_Tier3Token : C_DOTA_Item_TierToken  size 0x780
     namespace C_DOTA_Item_Tier3Token {
@@ -34669,11 +34669,11 @@ namespace client_dll {
     }
     // C_PointClientUIWorldPanel : C_BaseClientUIEntity  size 0xCF0
     namespace C_PointClientUIWorldPanel {
-        constexpr auto m_bForceRecreateNextUpdate = 0xAC0; // bool
-        constexpr auto m_bMoveViewToPlayerNextThink = 0xAC1; // bool
-        constexpr auto m_bCheckCSSClasses = 0xAC2; // bool
-        constexpr auto m_anchorDeltaTransform = 0xAD0; // CTransform
-        constexpr auto m_pOffScreenIndicator = 0xC60; // CPointOffScreenIndicatorUi*
+        constexpr auto m_bForceRecreateNextUpdate = 0xAC0; // bool  MNotSaved
+        constexpr auto m_bMoveViewToPlayerNextThink = 0xAC1; // bool  MNotSaved
+        constexpr auto m_bCheckCSSClasses = 0xAC2; // bool  MNotSaved
+        constexpr auto m_anchorDeltaTransform = 0xAD0; // CTransform  MNotSaved
+        constexpr auto m_pOffScreenIndicator = 0xC60; // CPointOffScreenIndicatorUi*  MNotSaved
         constexpr auto m_bIgnoreInput = 0xC88; // bool
         constexpr auto m_bLit = 0xC89; // bool
         constexpr auto m_bFollowPlayerAcrossTeleport = 0xC8A; // bool
@@ -35058,21 +35058,21 @@ namespace client_dll {
     }
     // CBasePlayerController : C_BaseEntity  size 0x7E0
     namespace CBasePlayerController {
-        constexpr auto m_CommandContext = 0x5F8; // C_CommandContext
-        constexpr auto m_nInButtonsWhichAreToggles = 0x698; // uint64
-        constexpr auto m_nTickBase = 0x6A0; // uint32
+        constexpr auto m_CommandContext = 0x5F8; // C_CommandContext  MNotSaved
+        constexpr auto m_nInButtonsWhichAreToggles = 0x698; // uint64  MNotSaved
+        constexpr auto m_nTickBase = 0x6A0; // uint32  MNotSaved
         constexpr auto m_hPawn = 0x6A4; // CHandle< C_BasePlayerPawn >
         constexpr auto m_bKnownTeamMismatch = 0x6A8; // bool
-        constexpr auto m_hPredictedPawn = 0x6AC; // CHandle< C_BasePlayerPawn >
-        constexpr auto m_nSplitScreenSlot = 0x6B0; // CSplitScreenSlot
-        constexpr auto m_hSplitOwner = 0x6B4; // CHandle< CBasePlayerController >
-        constexpr auto m_hSplitScreenPlayers = 0x6B8; // CUtlVector< CHandle< CBasePlayerController > >
+        constexpr auto m_hPredictedPawn = 0x6AC; // CHandle< C_BasePlayerPawn >  MNotSaved
+        constexpr auto m_nSplitScreenSlot = 0x6B0; // CSplitScreenSlot  MNotSaved
+        constexpr auto m_hSplitOwner = 0x6B4; // CHandle< CBasePlayerController >  MNotSaved
+        constexpr auto m_hSplitScreenPlayers = 0x6B8; // CUtlVector< CHandle< CBasePlayerController > >  MNotSaved
         constexpr auto m_bIsHLTV = 0x6D0; // bool
-        constexpr auto m_iConnected = 0x6D4; // PlayerConnectedState
-        constexpr auto m_iMostConnected = 0x6D8; // PlayerConnectedState
-        constexpr auto m_iszPlayerName = 0x6DC; // char[128]
-        constexpr auto m_steamID = 0x768; // uint64
-        constexpr auto m_bIsLocalPlayerController = 0x770; // bool
+        constexpr auto m_iConnected = 0x6D4; // PlayerConnectedState  MNotSaved
+        constexpr auto m_iMostConnected = 0x6D8; // PlayerConnectedState  MNotSaved
+        constexpr auto m_iszPlayerName = 0x6DC; // char[128]  MNotSaved
+        constexpr auto m_steamID = 0x768; // uint64  MNotSaved
+        constexpr auto m_bIsLocalPlayerController = 0x770; // bool  MNotSaved
         constexpr auto m_bNoClipEnabled = 0x771; // bool
         constexpr auto m_iDesiredFOV = 0x774; // uint32
     }

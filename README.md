@@ -21,6 +21,7 @@ Running the tool produces a `dota2_dump/` folder containing:
 | `engine_offsets.hpp` | Engine globals — entity list, view matrix, local player controller |
 | `important_offsets.hpp` | Curated subset of the most commonly used classes |
 | `enums.hpp` | Schema enums as real `enum class` (`DOTA_RUNES`, `MoveType_t`, ...) |
+| `vtables.hpp` | Class -> vtable RVA, recovered from MSVC RTTI (~25,000 classes) |
 | `offsets.json` | Same data, machine-readable — load it at startup instead of editing headers |
 | `offsets_diff.txt` | What moved since the previous dump (written only when something changed) |
 
@@ -56,6 +57,26 @@ name exists in several modules with different layouts (`CGameSceneNode::m_vecOri
 is `0x90` in `client.dll` and `0x80` in `server.dll`), so the module namespace is
 what keeps `client.dll.hpp` and `server.dll.hpp` usable in the same translation
 unit.
+
+Fields also carry their schema metadata where the build has any
+(`MNotSaved`, `MPropertyDescription`, ...). Note that Dota's retail build
+strips the `MNetwork*` tags entirely — the strings are not present in
+`client.dll` at all, unlike CS2 — so no dumper can report them here.
+
+Vtable addresses come from the RTTI left in the binary:
+
+```cpp
+namespace vtables { namespace client_dll {
+    constexpr auto C_DOTA_BaseNPC = 0x4801E88;
+    constexpr auto CPrediction    = 0x47E0A30;
+} }
+```
+
+The method *index* inside a vtable still has to come from a decompiler — the
+binary ships no method names — but the table address itself no longer needs a
+signature. Verified by reading the vtable pointer of live interface objects:
+`Source2ClientPrediction001` resolves to `CPrediction` at exactly the dumped
+RVA.
 
 ## Staying up to date
 
